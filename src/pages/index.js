@@ -85,6 +85,8 @@ const IndexPage = () => {
     <main style={pageStyles}>
       <h1>I am Weasel</h1>
       <h1>I'm Doven</h1>
+      <h1>Im fuad</h1>
+    
     </main>
   );
 };
