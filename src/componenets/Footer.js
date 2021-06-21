@@ -9,6 +9,15 @@ const Footer = () => {
       <button>
         <Link to="/projects">all projects</Link>
       </button>
+      <a
+        href="https://www.linkedin.com/in/paul-bongers/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        LinkedIn
+      </a>
+      <a href="https://github.com/cunning-weasel">GitHub</a>
+      <a href="mailto:paulbongers22@gmail.com">Email me</a>
     </div>
   );
 };
