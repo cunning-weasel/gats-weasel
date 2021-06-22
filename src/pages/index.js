@@ -6,6 +6,7 @@ import Body from "../componenets/Body";
 import Banner from "../componenets/Banner";
 
 
+
 // markup
 const IndexPage = () => {
   return (

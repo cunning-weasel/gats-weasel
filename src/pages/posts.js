@@ -37,7 +37,6 @@ const Projects = () => {
     <>
       <Nav />
       <h2>projects</h2>
-
       {data
         ? data.allGhostPost.edges.map(({ node }) => {
             return (
