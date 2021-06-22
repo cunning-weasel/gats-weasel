@@ -3,10 +3,9 @@ import Nav from "../componenets/Nav";
 import Footer from "../componenets/Footer";
 import Header from "../componenets/Header";
 import Body from "../componenets/Body";
+import Banner from "../componenets/Banner";
 import PopUp from "../componenets/Modal";
-// import { StaticImage } from 'gatsby-plugin-image'
 
-// markup
 const IndexPage = () => {
   return (
     <>
@@ -14,7 +13,9 @@ const IndexPage = () => {
       <PopUp />
       <Header />
       <Body />
+      <Banner />
       <Footer />
+      
     </>
   );
 };
