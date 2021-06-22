@@ -3,6 +3,8 @@ import Nav from "../componenets/Nav";
 import Footer from "../componenets/Footer";
 import Header from "../componenets/Header";
 import Body from "../componenets/Body";
+import Banner from "../componenets/Banner";
+
 
 // markup
 const IndexPage = () => {
@@ -11,7 +13,9 @@ const IndexPage = () => {
       <Nav />
       <Header />
       <Body />
+      <Banner />
       <Footer />
+      
     </>
   );
 };
