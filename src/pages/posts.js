@@ -2,7 +2,7 @@ import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Nav from "../componenets/Nav";
 
-const Projects = () => {
+const Posts = () => {
   // graphQL api call
   const data = useStaticQuery(
     graphql`
@@ -52,4 +52,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Posts;
