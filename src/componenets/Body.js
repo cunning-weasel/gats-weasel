@@ -7,7 +7,7 @@ const Body = () => {
     <>
       {/* what i do */}
       <div>
-        <h2 id="whatido">how i can help</h2>
+        <h2 id="whatido" className="text-warning" >how i can help</h2>
         <p>what i do</p>
         <StaticImage
           src="https://image.flaticon.com/icons/png/512/1998/1998087.png"

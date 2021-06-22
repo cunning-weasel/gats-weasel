@@ -1,18 +1,50 @@
 import * as React from "react";
+import { Link } from 'gatsby'
+
 
 const Nav = ({ children }) => {
   return (
     <main>
       <ul>
         <li>
-        <a href="/#contact">contacts</a>
+            <Link to="/">
+              Home
+            </Link>
         </li>
+
         <li>
-          <a href="/#projects">projects</a>
+            <Link to="/about">
+              About
+            </Link>
         </li>
+
         <li>
-        <a href="/#whatido">what i do</a>
-        </li>
+            <Link to="/workshops">
+            Workshops
+            </Link>
+          </li>
+        
+          <li>
+            <Link to="/digitalcampus">
+            Digital campus
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/news">
+            News
+            </Link>
+          </li>
+    
+
+          <li>
+            <Link to="/contact">
+            Contact
+            </Link>
+          </li>
+
+        
+
       </ul>
       {children}
     </main>
