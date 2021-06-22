@@ -6,9 +6,13 @@ import Button from "react-bootstrap/Button";
 
 const PopUp = () => {
   const [show, setShow] = useState(false);
-  
+
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  // need to adjust to trigger against time spent on page/ scroll depth
+  // - handle through state - should trigger once per user if they weren't 
+  // in digital campus yet - probably cookie :/
 
   return (
     <>
@@ -16,9 +20,9 @@ const PopUp = () => {
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>You've been here a while!</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Body>Why don't you check out our digital campus while you're here? LINK?</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
