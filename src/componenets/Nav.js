@@ -1,45 +1,44 @@
 import * as React from "react";
-import { StaticImage } from 'gatsby-plugin-image'
-import { Link, useStaticQuery, graphql } from 'gatsby'
+import { Link } from 'gatsby'
 
 
 const Nav = ({ children }) => {
   return (
     <main>
       <ul>
-        <li className={navLinkItem}>
-            <Link to="/" className={navLinkText}>
+        <li>
+            <Link to="/">
               Home
             </Link>
         </li>
 
-        <li className={navLinkItem}>
-            <Link to="/about" className={navLinkText}>
+        <li>
+            <Link to="/about">
               About
             </Link>
         </li>
 
-        <li className={navLinkItem}>
-            <Link to="/workshops" className={navLinkText}>
+        <li>
+            <Link to="/workshops">
             Workshops
             </Link>
           </li>
         
-          <li className={navLinkItem}>
-            <Link to="/digitalcampus" className={navLinkText}>
+          <li>
+            <Link to="/digitalcampus">
             Digital campus
             </Link>
           </li>
 
-          <li className={navLinkItem}>
-            <Link to="/news" className={navLinkText}>
+          <li>
+            <Link to="/news">
             News
             </Link>
           </li>
     
 
-          <li className={navLinkItem}>
-            <Link to="/contact" className={navLinkText}>
+          <li>
+            <Link to="/contact">
             Contact
             </Link>
           </li>
