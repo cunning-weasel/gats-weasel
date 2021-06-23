@@ -17,15 +17,19 @@ const Nav = () => {
 
       <Navbar bg="primary" variant="dark">
           <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+
+          <Navbar.Brand href="" src="../images/logo.png"></Navbar.Brand>
+          <StaticImage
+                    alt="Logo mindChase"
+                    src="../images/logo.png"
+                />
           <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#about">about</Nav.Link>
             <Nav.Link href="#workshops">workshops</Nav.Link>
-            <Nav.Link href="#digitalcampus">digitalcampus</Nav.Link>
+            <Nav.Link href="#game">games</Nav.Link>
             <Nav.Link href="#news">news</Nav.Link>
-            <Nav.Link href="#games">games</Nav.Link>
-            <Nav.Link href="#contact">contact</Nav.Link>
+
 
           </Nav>
           </Container>

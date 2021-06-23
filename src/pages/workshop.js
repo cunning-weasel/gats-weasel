@@ -1,5 +1,7 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card'
+import { StaticImage } from 'gatsby-plugin-image'
+
 
 
 function workshop() {
