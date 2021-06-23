@@ -1,19 +1,12 @@
 body{
-    background-color:grey;
+    background-color:grey ;
 }
 .container {
     background-color: grey;
     width: 50%;
     color: rgb(104, 84, 77);
 }
-body{
-    background-color:grey;
-}
-.container {
-    background-color: grey;
-    width: 50%;
-    color: rgb(104, 84, 77);
-}
+
 .title {
     text-align: center;
     font-size: 3em;
@@ -57,6 +50,17 @@ body{
     }
     }
 }
+.tab {
+    max-width: 800%;
+    padding: 0 2em;
+    border-radius: 0.5rem;
+    background-color:transparent;
+    line-height: 4em;
+    white-space: nowrap;
+    overflow: auto;
+    transition: all 0.5s linear;
+}
+
 .tab-items {
     margin: 0;
     padding: 0;
@@ -100,7 +104,7 @@ body{
 }
 
 .item-link:hover {
-    color: #297;
+    color: black;
     text-decoration: underline;
 }
 
@@ -112,4 +116,6 @@ body{
     grid-row: 1/2;
     align-self: end;
 }
-
+.tab:hover {
+    background-color:white;
+}
