@@ -3,8 +3,8 @@ import * as React from "react";
 const Header = () => {
     return (
         <div>
-            <h1>hi, i'm Paul.</h1>
-            <p>a growth hacker</p>
+            <h1>mindchase...</h1>
+            <h2>...easy growing for everyone</h2>
         </div>
     )
 }
