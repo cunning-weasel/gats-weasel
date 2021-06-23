@@ -1,53 +1,55 @@
 import * as React from "react";
 import { Link } from 'gatsby'
+import Navbar from 'react-bootstrap/Navbar'
 
 
-const Nav = ({ children }) => {
+
+
+
+
+
+
+const Nav = () => {
   return (
-    <main>
-      <ul>
-        <li>
-            <Link to="/">
+    <nav className="navbar navbar-dark bg-primary navbar-expand-lg ">
+      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+        <li className="nav-item">
+            <Link to="/" className="text-white nav-link">
               Home
             </Link>
         </li>
 
-        <li>
-            <Link to="/about">
-              About
+        <li className="nav-item">
+            <Link to="/about" className="text-white nav-link">
+              About us
             </Link>
         </li>
 
-        <li>
-            <Link to="/workshops">
+        <li className="nav-item">
+            <Link to="/workshops" className="text-white nav-link">
             Workshops
             </Link>
           </li>
-        
-          <li>
-            <Link to="/digitalcampus">
-            Digital campus
+
+          <li className="nav-item">
+            <Link to="/game" className="text-white nav-link">
+            Game
             </Link>
           </li>
 
-          <li>
-            <Link to="/news">
+          <li className="nav-item">
+            <Link to="/news" className="text-white nav-link">
             News
             </Link>
           </li>
-    
 
-          <li>
-            <Link to="/contact">
-            Contact
-            </Link>
-          </li>
 
-        
+
+
 
       </ul>
-      {children}
-    </main>
+      
+    </nav>
   );
 };
 
