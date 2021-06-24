@@ -1,7 +1,8 @@
 import * as React from "react";
 import { Link } from 'gatsby'
-import Navbar from 'react-bootstrap/Navbar'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
+import './Style.css';
 
 
 
@@ -10,46 +11,46 @@ import Navbar from 'react-bootstrap/Navbar'
 
 
 const Nav = () => {
+
   return (
-    <nav className="navbar navbar-dark bg-primary navbar-expand-lg ">
-      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-        <li className="nav-item">
+    <div className="navbar.transparent.navbar-inverse .navbar-inner transparent">
+      <nav className="navbar navbar-dark bg-primary navbar-expand-lg navbar-inner">
+        <ul className="navbar-nav">
+          <li className="nav-item marg">
             <Link to="/" className="text-white nav-link">
               Home
             </Link>
-        </li>
+          </li>
 
-        <li className="nav-item">
+          <li className="nav-item marg">
             <Link to="/about" className="text-white nav-link">
               About us
             </Link>
-        </li>
+          </li>
 
-        <li className="nav-item">
+          <li className="nav-item marg">
             <Link to="/workshops" className="text-white nav-link">
-            Workshops
+              Workshops
             </Link>
           </li>
 
-          <li className="nav-item">
+          <li className="nav-item marg">
             <Link to="/game" className="text-white nav-link">
-            Game
+              Game
             </Link>
           </li>
 
-          <li className="nav-item">
+          <li className="nav-item marg">
             <Link to="/news" className="text-white nav-link">
-            News
+              News
             </Link>
           </li>
 
+        </ul>
 
-
-
-
-      </ul>
+      </nav>
       
-    </nav>
+     </div>
   );
 };
 

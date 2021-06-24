@@ -1,0 +1,36 @@
+.transparent :hover {
+    background: rgba(0,0,0,0.4) }
+
+.marg {
+        margin-left: 50px;
+        /* padding: 100px; */
+     
+    }
+
+.container-workshop{
+    display: flex;
+}
+
+.card{
+    width: 300px;
+    min-height: 100px;
+    border: 2px 2px solid;
+    margin: 20px;
+    background: rgb(221, 220, 178);
+} 
+
+.img-work{
+    flex: none;
+    justify-content: center;
+    content: 'center';
+    /* position: center; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-text{
+    margin-left: auto;
+    margin-right: auto;
+    content: 'center';
+}
+    
