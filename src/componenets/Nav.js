@@ -23,7 +23,7 @@ const Nav = () => {
          
         </li>
           <li className="tab-item">
-          <Link className="item-link" onClick="select(this)" to="/About"> About </Link>
+          <Link className="item-link" onClick="select(this)" to="/about"> about </Link>
         </li>
           <li className="tab-item">
           <Link className="item-link" onClick="select(this)" to="/Work shops"> Work shops</Link>
