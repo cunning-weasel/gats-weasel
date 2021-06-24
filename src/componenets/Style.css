@@ -1,7 +1,17 @@
-.transparent :hover {
-    background: rgba(0,0,0,0.4) }
+/* .transparent :hover {
+    background: rgba(37, 173, 236, 0.4) } */
 
-.marg {
+
+    .container-nav{
+        background-color: rgb(85, 131, 192);
+    }
+    .container-nav :hover {
+        background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+        background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+
+    }
+
+    .marg {
         margin-left: 50px;
         /* padding: 100px; */
      
@@ -15,7 +25,7 @@
     width: 300px;
     min-height: 100px;
     border: 2px 2px solid;
-    margin: 20px;
+    margin: 10px;
     background: rgb(221, 220, 178);
 } 
 

@@ -6,15 +6,11 @@ import './Style.css';
 
 
 
-
-
-
-
 const Nav = () => {
 
   return (
-    <div className="navbar.transparent.navbar-inverse .navbar-inner transparent">
-      <nav className="navbar navbar-dark bg-primary navbar-expand-lg navbar-inner">
+    <div className="navbar.transparent.navbar-inverse .navbar-inner transparent container-nav">
+      <nav className="navbar navbar-dark  navbar-expand-lg navbar-inner">
         <ul className="navbar-nav">
           <li className="nav-item marg">
             <Link to="/" className="text-white nav-link">
