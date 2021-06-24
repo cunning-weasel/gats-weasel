@@ -5,9 +5,10 @@ import "./Body.scss";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Jumbotron from "react-bootstrap/Jumbotron";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Form from "react-bootstrap/Form";
 import Banner from "../componenets/Banner";
-
-// bootstrap is hard without internets :/ -  weasel
 
 const Body = () => {
   return (
@@ -34,13 +35,15 @@ const Body = () => {
 
       {/* intro/ workshops */}
       <main>
-        <section className="page-section-intro">
+        <section className="mt-5 mb-5">
           <Container>
-            <div className="introElems justify-content-center align-items-center">
-              <div className="underline">
+            <Row>
+              <Col className="underline">
                 <h1>Lorem ipsum dolor sit amet</h1>
-              </div>
-              <div>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
                 <p>
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                   Accusamus, autem, fugiat voluptatem in consequatur repellendus
@@ -59,11 +62,11 @@ const Body = () => {
                   nulla consequuntur, voluptate dolorum tempora excepturi ipsum
                   quibusdam?
                 </p>
-                <Button>
-                  <Link to="/workshops">Our workshops</Link>
-                </Button>
-              </div>
-            </div>
+              </Col>
+            </Row>
+            <Button variant="danger">
+              <Link to="/workshops">Our workshops</Link>
+            </Button>
           </Container>
         </section>
 
@@ -94,7 +97,7 @@ const Body = () => {
                     <li></li>
                   </ul>
                 </div>
-                <Button>
+                <Button variant="danger">
                   <Link to="/about">CHECK OUT OUR TEAM</Link>
                 </Button>
               </div>
@@ -107,7 +110,9 @@ const Body = () => {
           <Container>
             <div className="partnersElems justify-content-center align-items-center">
               <h2 className="underline">our partners</h2>
-              {/* we can think about doing some grid/ flex card layout for this? */}
+              {/* we can think about doing some grid/ flex card layout for this? 
+                  graphql fetch from partners page?
+              */}
               <Banner />
             </div>
           </Container>
@@ -123,6 +128,22 @@ const Body = () => {
             </div>
           </Container>
         </section>
+
+        {/* sign-up form cta? */}
+        <Form className=".bottom-cta">
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <h3 className="mb-2 text-center text-upper">Join newsletter</h3>
+            <div>
+            <Form.Control type="email" placeholder="Email*" />
+            <Form.Text className="text-muted">
+              This is where I want "email must be formatted correctly" to show up
+            </Form.Text>
+            </div>
+          </Form.Group>
+          <Button variant="danger" type="submit">
+            Submit
+          </Button>
+        </Form>
       </main>
     </>
   );

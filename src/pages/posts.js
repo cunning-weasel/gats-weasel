@@ -30,7 +30,6 @@ const Posts = () => {
       }
     `
   );
-
   // console.log(data.allGhostPost.edges);
 
   return (
@@ -42,7 +41,6 @@ const Posts = () => {
             return (
               <div key={node.id}>
                 <h1>{node.title}</h1>
-                <h2>Doven</h2>
                 <article dangerouslySetInnerHTML={{ __html: node.html }} />
               </div>
             );
