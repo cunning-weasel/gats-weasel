@@ -30,8 +30,12 @@ const Posts = () => {
       }
     `
   );
-  // console.log(data.allGhostPost.edges);
 
+  // console.log(data);
+  
+  // rest - check param for edges
+  // https://mindchase.ghost.io/ghost/api/v3/content/posts/?key=${process.env.GATSBY_CONTENT_API}
+  
   return (
     <>
       <Nav />

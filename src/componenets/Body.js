@@ -86,15 +86,15 @@ const Body = () => {
               <div>
                 <div className="underline">
                   <h2>
-                    <div>empower, knowledge, growth</div>
+                    <div>empower, knowledge, growth, education and training</div>
                   </h2>
                 </div>
                 <div>
                   <ul className="list-split">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>Lorem ipsum dolor sit amet</li>
+                    <li>Lorem ipsum dolor sit amet</li>
+                    <li>Lorem ipsum dolor sit amet</li>
+                    <li>Lorem ipsum dolor sit amet</li>
                   </ul>
                 </div>
                 <Button variant="danger">
@@ -111,24 +111,24 @@ const Body = () => {
             <div className="partnersElems justify-content-center align-items-center">
               <h2 className="underline">our partners</h2>
               {/* we can think about doing some grid/ flex card layout for this? 
-                  graphql fetch from partners page?
+                  graphQL fetch from partners page?
               */}
               <Banner />
             </div>
           </Container>
         </section>
-
+        
         {/* news? */}
         <section className="page-section-news">
           <Container>
             <div className="newsElems justify-content-center align-items-center">
               <h2 className="underline">news? work??</h2>
               {/* bring in feed from news? */}
-              Here we can do a graphql fetch from news or smthn
+              Here we can do a graphQL fetch from news or smthn
             </div>
           </Container>
         </section>
-
+        
         {/* sign-up form cta? */}
         <Form className=".bottom-cta">
           <Form.Group className="mb-3" controlId="formBasicEmail">
