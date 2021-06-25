@@ -13,12 +13,17 @@
 
     .marg {
         margin-left: 50px;
-        /* padding: 100px; */
      
     }
 
 .container-workshop{
+    /* width: 800px; */
     display: flex;
+    flex-wrap: wrap;
+}
+
+.container-workshop > * {
+    flex: 1 1 40em;
 }
 
 .card{
@@ -29,9 +34,11 @@
     background: rgb(221, 220, 178);
 } 
 
-.img-work{
-    flex: none;
-    justify-content: center;
+.img-workshops{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    /* justify-content: center; */
     content: 'center';
     /* position: center; */
     margin-left: auto;
