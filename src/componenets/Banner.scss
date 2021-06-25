@@ -13,41 +13,29 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 .socialicons {
-    display: flex;
-    margin-top: 100px;
-    a {
-        &:after {
-            content: "";
-            height: 80px;
-            z-index: -1;
-            position: absolute;
-            bottom: -80px;
-            left: 0;
-            background: linear-gradient(to bottom, rgb(158, 0, 231), rgb(57, 1, 211));
-            transition: 0.2s;
+ 
+
+    margin-top: 300px;
+
+        .icon {
+            width: 300px;
+            height: 100px;
+            margin: 0 200px;
+            text-align: center;
+            line-height: 10px;
+            font-size: 40px;
+            text-decoration: none;
+            color: white;
+            overflow: hidden;
+            position: relative;
+                &:hover {
+                    color: red;
+                    a{
+                        &:hover::after {
+                        bottom: 0;
+                    }
+                }
         }
-    }
-    .icon {
-        width: 500px;
-        height: 100px;
-        box-shadow: 0 0 5px 10px rgba(0, 0, 0, 0.05);
-        margin: 0 30px;
-        text-align: center;
-        line-height: 80px;
-        font-size: 30px;
-        text-decoration: none;
-        color: rgb(54, 44, 44);
-        border-radius: 50%;
-        overflow: hidden;
-        position: relative;
-        &:hover {
-            color: #fff;
-            a{
-                &:hover::after {
-                bottom: 0;
-            }
-        }
-    }
     }
 }
 .tab {
@@ -118,4 +106,17 @@ body{
 }
 .tab:hover {
     background-color:white;
+}
+
+.wrapper {
+    //background-image: url(../images/social_media/Linkedin_Banner_social_media.png);
+    background-color:black;
+    width: 1560px;
+    height: 390px;
+    margin-top: 15rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    
+
+    
 }
