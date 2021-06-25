@@ -16,7 +16,7 @@ const PopUp = () => {
 
   return (
     <>
-      <Button onClick={handleShow}>modal sample</Button>
+      {/*<Button onClick={handleShow}>modal sample</Button>*/}
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>

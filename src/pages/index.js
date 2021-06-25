@@ -6,6 +6,7 @@ import Body from "../componenets/Body";
 // import Banner from "../componenets/Banner";
 
 const IndexPage = () => {
+
   return (
     <>
       <Nav />
@@ -13,7 +14,6 @@ const IndexPage = () => {
       <Body />
       {/* <Banner /> - commenting this out to move to body */}
       <Footer />
-      
     </>
   );
 };
