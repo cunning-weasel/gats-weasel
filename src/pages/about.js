@@ -1,6 +1,6 @@
 import * as React from "react";
-import Nav from "../componenets/Nav";
-import Footer from "../componenets/Footer";
+import Nav from "../components/Nav";
+import Footer from "../components/Footer";
 import { StaticImage } from "gatsby-plugin-image";
 
 // markup

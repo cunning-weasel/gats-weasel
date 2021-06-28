@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import Nav from "../componenets/Nav";
+import Nav from "../components/Nav";
 
 const Posts = () => {
   // graphQL api call

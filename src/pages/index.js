@@ -1,10 +1,10 @@
 import * as React from "react";
-import Nav from "../componenets/Nav";
-import Footer from "../componenets/Footer";
-import Header from "../componenets/Header";
-import Body from "../componenets/Body";
-import Banner from "../componenets/Banner";
-import PopUp from "../componenets/Modal";
+import Nav from "../components/Nav";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import Body from "../components/Body";
+import Banner from "../components/Banner";
+import PopUp from "../components/Modal";
 
 const IndexPage = () => {
   return (
