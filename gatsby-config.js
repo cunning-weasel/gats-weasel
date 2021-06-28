@@ -15,7 +15,10 @@ module.exports = {
     "gatsby-plugin-sass",
     `gatsby-transformer-sharp`,
     `gatsby-plugin-fontawesome-css`,
+<<<<<<< HEAD
     `gatsby-plugin-react-helmet`,
+=======
+>>>>>>> 81e681c3f40d6d5a78d1a64c848dd6cc47fa35ce
     {
       resolve: `gatsby-source-ghost`,
       options: {
