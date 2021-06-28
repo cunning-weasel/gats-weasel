@@ -2,8 +2,11 @@ require("dotenv").config();
 
 module.exports = {
   siteMetadata: {
-    title: "gats-weaseler",
-    description: "weasel-maker",
+    title: "mindchase",
+    titleTemplate: "%s · easy growing for everyone",
+    description: "Help everyone to grow beyond their limits, to expand their horizon and to find what they are looking to achieve in life.",
+    url: "https://www.mindchase.de",
+    image: "/images/favicon.ico",
   },
   plugins: [
     "gatsby-plugin-gatsby-cloud",
@@ -12,6 +15,7 @@ module.exports = {
     "gatsby-plugin-sass",
     `gatsby-transformer-sharp`,
     `gatsby-plugin-fontawesome-css`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-ghost`,
       options: {

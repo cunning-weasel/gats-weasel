@@ -8,7 +8,7 @@ const PopUp = () => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  //const handleShow = () => setShow(true);
 
   // need to adjust to trigger against time spent on page/ scroll depth
   // - handle through state - should trigger once per user if they weren't 
