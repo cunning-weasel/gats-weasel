@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     title: "mindchase",
     titleTemplate: "%s · easy growing for everyone",
-    description: "mindchase help everyone to grow beyond their limits, to expand their horizon and to find what they are looking to achieve in life. Simple. Customized. For everyone. Workshops, digital learning solutions, interesting weekly inspirations and individual consulting hours.",
+    description: "Help everyone to grow beyond their limits, to expand their horizon and to find what they are looking to achieve in life.",
     url: "https://www.mindchase.de",
     image: "/images/favicon.ico",
   },
@@ -15,10 +15,7 @@ module.exports = {
     "gatsby-plugin-sass",
     `gatsby-transformer-sharp`,
     `gatsby-plugin-fontawesome-css`,
-<<<<<<< HEAD
     `gatsby-plugin-react-helmet`,
-=======
->>>>>>> 81e681c3f40d6d5a78d1a64c848dd6cc47fa35ce
     {
       resolve: `gatsby-source-ghost`,
       options: {
