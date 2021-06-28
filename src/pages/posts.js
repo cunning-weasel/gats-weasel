@@ -30,11 +30,10 @@ const Posts = () => {
       }
     `
   );
-
-  // console.log(data);
   
+  // console.log(data);
   // rest - check param for edges
-  // https://mindchase.ghost.io/ghost/api/v3/content/posts/?key=${process.env.GATSBY_CONTENT_API}
+  // console.log(`https://mindchase.ghost.io/ghost/api/v3/content/posts/?key=${process.env.GATSBY_CONTENT_API}`);
   
   return (
     <>

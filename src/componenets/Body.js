@@ -11,6 +11,10 @@ import Form from "react-bootstrap/Form";
 import Banner from "../componenets/Banner";
 
 const Body = () => {
+
+  // rest - check param for edges
+  // console.log(`https://mindchase.ghost.io/ghost/api/v3/content/posts/?key=${process.env.GATSBY_CONTENT_API}`);
+
   return (
     <>
       {/* jumbotron */}
@@ -32,7 +36,7 @@ const Body = () => {
           </div>
         </Container>
       </Jumbotron>
-
+      
       {/* intro/ workshops */}
       <main>
         <section className="mt-5 mb-5">
@@ -129,20 +133,22 @@ const Body = () => {
           </Container>
         </section>
         
-        {/* sign-up form cta? */}
-        <Form className=".bottom-cta">
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <h3 className="mb-2 text-center text-upper">Join newsletter</h3>
-            <div>
+        {/* sign-up form cta */}
+        <Form className="bottom-cta text-align:center d-flex justify-content-center">
+          <Row>
+            <Col>
+          <Form.Group className="mt-5 mb-5" controlId="formBasicEmail">
+            <h3 className="mb-2 text-center text-uppercase text-white mb-3">Join newsletter</h3>
             <Form.Control type="email" placeholder="Email*" />
-            <Form.Text className="text-muted">
-              This is where I want "email must be formatted correctly" to show up
-            </Form.Text>
-            </div>
-          </Form.Group>
-          <Button variant="danger" type="submit">
+            <Button className="bottom-cta btn-outline-light" type="submit">
             Submit
           </Button>
+            <Form.Text className="text-white">
+              This is where I want "email must be formatted correctly" to show up
+            </Form.Text>
+          </Form.Group>
+          </Col>
+          </Row>   
         </Form>
       </main>
     </>

@@ -9,7 +9,7 @@ const IndexPage = () => {
 
   return (
     <>
-      <Nav />
+      {/* <Nav /> */}
       {/* <Header /> */}
       <Body />
       {/* <Banner /> - commenting this out to move to body */}
