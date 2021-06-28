@@ -1,14 +1,14 @@
 import * as React from "react";
-import Nav from "../components/Nav";
-import Footer from "../components/Footer";
 import { StaticImage } from "gatsby-plugin-image";
+import Layout from "../components/Layout";
+import SEO from "../components/seo";
 
 // markup
 const AboutPage = () => {
   return (
-    <>
-      <Nav />
-      <div className="container">
+    <Layout>
+      <SEO title="About" />
+       <div className="container">
         <div className="row">
           <div className="col">
             <StaticImage
@@ -62,9 +62,7 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
-
-      <Footer />
-    </>
+    </Layout>
   );
 };
 

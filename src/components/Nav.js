@@ -1,53 +1,80 @@
 import * as React from "react";
 import { Link } from 'gatsby'
-import 'bootstrap/dist/css/bootstrap.min.css'
-
-import './Style.scss';
-
 
 
 const Nav = () => {
+  const [showMobile, setShowMobile] = React.useState(false);
+  const showMobileNav = (e) => {
+    e.preventDefault();
+    if (showMobile) {
+      document.getElementById("navbarSupportedContent").style.display = 'none';
+    } else {
+      document.getElementById("navbarSupportedContent").style.display = 'block';
+    }
+    setShowMobile(!showMobile);
+  }
 
+
+  function Select(link){
+    const item = link.parentNode;
+    const tabs = item.parentNode
+    const index = Array.prototype.indexOf.call(tabs.children, item)
+    const items = tabs.querySelectorAll(".tab-item")
+
+    tabs.style.setProperty("-index", index +1)
+    items.forEach(item =>item.classList.remove("active"))
+    item.lassList.add("active")
+  }
   return (
-    <div className="navbar.transparent.navbar-inverse .navbar-inner transparent container-nav">
-      <nav className="navbar navbar-dark  navbar-expand-lg navbar-inner">
-        <ul className="navbar-nav">
-          <li className="nav-item marg">
-            <Link to="/" className="text-white nav-link">
-              Home
-            </Link>
-          </li>
-
-          <li className="nav-item marg">
-            <Link to="/about" className="text-white nav-link">
-              About us
-            </Link>
-          </li>
-
-          <li className="nav-item marg">
-            <Link to="/workshops" className="text-white nav-link">
-              Workshops
-            </Link>
-          </li>
-
-          <li className="nav-item marg">
-            <Link to="/game" className="text-white nav-link">
-              Game
-            </Link>
-          </li>
-
-          <li className="nav-item marg">
-            <Link to="/news" className="text-white nav-link">
-              News
-            </Link>
-          </li>
-
-        </ul>
-
-      </nav>
-      
-     </div>
+    <nav className="navbar navbar-expand-lg navbar-light bg-transparent ">
+      <div className="container-fluid">
+        <Link className="navbar-brand" to="/">Mindchase</Link>
+        <button onClick={showMobileNav} className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <Link className="nav-link" to="/about">
+                About
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/workshops">
+                Workshops
+              </Link>
+            </li>
+            <li className="nav-item">
+              <li><a href="https://campus.mindchase.de" className="nav-link">Digital Campus</a></li>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/news">
+                News
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/contact">
+                Contact
+              </Link>
+            </li>
+            {showMobile && <li className="nav-item dropdown">
+              <ul className="dropdown-menu" aria-aria-labelledby="navbarDropdown">
+                <li><Link className="dropdown-item" to="/">Home</Link></li>
+                <li><Link className="dropdown-item" to="/about">About</Link></li>
+                <li><Link className="dropdown-item" to="/workshops">Workshops</Link></li>
+                <li><Link className="dropdown-item" to="/news">News</Link></li>
+                <li><Link className="dropdown-item" to="/contact">Contact</Link></li>
+                <li><a href="https://campus.mindchase.de" className="dropdown-item">Digital Campus</a></li>
+              </ul>
+            </li>}
+          </ul>
+        </div>
+      </div>
+    </nav>
   );
+ 
 };
 
 export default Nav;
+
+
