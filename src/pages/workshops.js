@@ -1,6 +1,6 @@
 import React from 'react'
 import { StaticImage } from "gatsby-plugin-image";
-// import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import '../componenets/Style.scss';
 import Nav from "../componenets/Nav"
 
@@ -14,7 +14,7 @@ function workshops() {
 
             <div className="d-flex flex-row flex-wrap justify-content-center">
 
-                <div className="card  bg-warning ">
+                <div className="card  mb-3 bg-warning ">
                     <StaticImage className="img-workshops"
                         alt="workshps 1"
                         src="../images/Logos/mindchase_Logo komplett transparent.png"
@@ -23,6 +23,7 @@ function workshops() {
                         height={200}
                     />
                     <h2>Presentation skills</h2>
+
                     <div className="card-body">
                         <p className="card-text">What if you are standing in a crowd o people and everyone is eagerly listening to your every word</p>
                     </div>
