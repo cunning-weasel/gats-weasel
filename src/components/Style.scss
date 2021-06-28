@@ -1,0 +1,50 @@
+/* .transparent :hover {
+    background: rgba(37, 173, 236, 0.4) } */
+
+
+    .container-nav{
+        background-color: rgb(85, 131, 192);
+    }
+    .container-nav :hover {
+        background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+        background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+
+    }
+
+    .marg {
+        margin-left: 50px;
+     
+    }
+
+//   .container-workshop{
+//     display: flex;
+//     flex-wrap: wrap;
+//  } 
+
+// .container-workshop > * {
+//     flex: 1 1 40em;
+// }
+
+// .card{
+//     width: 300px;
+//     min-height: 100px;
+//     border: 2px 2px solid;
+//     margin: 10px;
+//     background: rgb(221, 220, 178);
+// } 
+
+// .img-workshops{
+//     width: 100px;
+//     height: 100px;
+//     text-align: center;
+//     content: 'center';
+//     margin-left: auto;
+//     margin-right: auto;
+// }
+
+//  .card-text{
+//     margin-left: auto;
+//     margin-right: auto;
+//     content: 'center'; 
+//  }
+    
