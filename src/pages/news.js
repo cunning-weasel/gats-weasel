@@ -1,8 +1,9 @@
 import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import Nav from "../componenets/Nav";
+import Layout from "../components/Layout";
+import SEO from "../components/seo";
 
-const Posts = () => {
+const News = () => {
   // graphQL api call
   const data = useStaticQuery(
     graphql`
@@ -31,25 +32,22 @@ const Posts = () => {
     `
   );
 
-  // console.log(data.allGhostPost.edges);
-
   return (
-    <>
-      <Nav />
-      <h2>projects</h2>
+    <Layout>
+      <SEO title="News"/>
+      <h2>News</h2>
       {data
         ? data.allGhostPost.edges.map(({ node }) => {
             return (
               <div key={node.id}>
                 <h1>{node.title}</h1>
-                <h2>Doven</h2>
                 <article dangerouslySetInnerHTML={{ __html: node.html }} />
               </div>
             );
           })
         : null}
-    </>
+    </Layout>
   );
 };
 
-export default Posts;
+export default News;
