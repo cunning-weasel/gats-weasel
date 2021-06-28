@@ -2,7 +2,7 @@ import * as React from "react";
 import { Link } from 'gatsby'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-import './Style.css';
+import './Style.scss';
 
 
 
