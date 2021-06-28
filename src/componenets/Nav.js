@@ -2,53 +2,50 @@ import * as React from "react";
 import { Link } from 'gatsby'
 
 
-const Nav = ({ children }) => {
+const Nav = () => {
+  function Select(link){
+    const item = link.parentNode;
+    const tabs = item.parentNode
+    const index = Array.prototype.indexOf.call(tabs.children, item)
+    const items = tabs.querySelectorAll(".tab-item")
+
+    tabs.style.setProperty("-index", index +1)
+    items.forEach(item =>item.classList.remove("active"))
+    item.lassList.add("active")
+  }
   return (
-    <main>
-      <ul>
-        <li>
-            <Link to="/">
-              Home
-            </Link>
+    Select && 
+    <div className="tab">
+      <ul className="tab-items">
+        <li className="tab-item">
+          <Link className="item" onClick="select(this)" to="/Home">
+            <i className="fas fa-home"></i> Home</Link>
+         
         </li>
-
-        <li>
-            <Link to="/about">
-              About
-            </Link>
+          <li className="tab-item">
+          <Link className="item-link" onClick="select(this)" to="/about"> about </Link>
         </li>
-
-        <li>
-            <Link to="/workshops">
-            Workshops
-            </Link>
-          </li>
-        
-          <li>
-            <Link to="/digitalcampus">
-            Digital campus
-            </Link>
-          </li>
-
-          <li>
-            <Link to="/news">
-            News
-            </Link>
-          </li>
-    
-
-          <li>
-            <Link to="/contact">
-            Contact
-            </Link>
-          </li>
-
-        
+          <li className="tab-item">
+          <Link className="item-link" onClick="select(this)" to="/Work shops"> Work shops</Link>
+        </li>
+          <li className="tab-item"> 
+          <Link className="item-link" onClick="select(this)" to="/Digital Campus"> Digital Campus</Link>
+        </li>
+        <li className="tab-item"> 
+          <Link className="item-link" onClick="select(this)" to="/Digital Campus"> News</Link>
+        </li>
+        <li className="tab-item"> 
+          <Link className="item-link" onClick="select(this)" to="/Contact"> Contact</Link>
+        </li>
+       
 
       </ul>
-      {children}
-    </main>
+    </div>
   );
+ 
 };
 
 export default Nav;
+
+
+

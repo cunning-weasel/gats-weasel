@@ -7,6 +7,7 @@ import Banner from "../componenets/Banner";
 import PopUp from "../componenets/Modal";
 
 const IndexPage = () => {
+
   return (
     <>
       <Nav />
@@ -15,7 +16,6 @@ const IndexPage = () => {
       <Body />
       <Banner />
       <Footer />
-      
     </>
   );
 };
