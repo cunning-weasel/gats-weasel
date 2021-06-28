@@ -10,6 +10,7 @@ export default function Banner() {
         <div className="row">
           <div className="col">
           <a href="https://digitalcareerinstitute.org/" target="_blank" rel="noopener noreferrer">
+            <a href="https://digitalcareerinstitute.org/" target="_blank" rel="noopener noreferrer">
               <StaticImage
               src="../images/Logos/partners/dci-logo-blue.png"
               alt="DCI it is a shortcut for Digital Career Institute, logo is in blue color."
@@ -27,4 +28,3 @@ export default function Banner() {
     </div>
   );
 }
-
