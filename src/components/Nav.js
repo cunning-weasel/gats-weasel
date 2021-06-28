@@ -14,17 +14,6 @@ const Nav = () => {
     setShowMobile(!showMobile);
   }
 
-
-  function Select(link){
-    const item = link.parentNode;
-    const tabs = item.parentNode
-    const index = Array.prototype.indexOf.call(tabs.children, item)
-    const items = tabs.querySelectorAll(".tab-item")
-
-    tabs.style.setProperty("-index", index +1)
-    items.forEach(item =>item.classList.remove("active"))
-    item.lassList.add("active")
-  }
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-transparent ">
       <div className="container-fluid">
@@ -72,7 +61,7 @@ const Nav = () => {
       </div>
     </nav>
   );
- 
+
 };
 
 export default Nav;
