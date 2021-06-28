@@ -24,6 +24,13 @@ const Footer = () => {
             title="Instagram"
             className="icon"
           >
+            <StaticImage 
+            src="../images/QR_codes/Insta_QR_Code_klein.jpg"
+            alt="social qr."
+            href="https://www.instagram.com/mindchase2020/"
+            layout="fixed"
+            width={100}
+            height={70}/>
             <i className="fab fa-instagram"></i>
             <a
               href="https://www.linkedin.com/company/mindchase"
