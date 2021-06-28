@@ -1,7 +1,7 @@
 import React from 'react'
 import { StaticImage } from "gatsby-plugin-image";
 import 'bootstrap/dist/css/bootstrap.min.css'
-import '../componenets/Style.scss';
+import '../components/Style.scss';
 import Nav from "../components/Nav"
 
 
