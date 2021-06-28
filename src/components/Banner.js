@@ -1,11 +1,12 @@
 import * as React from "react";
-import "./Banner.scss";
+import {banner} from "./Banner.module.scss";
 import { StaticImage } from "gatsby-plugin-image";
 //import { Link } from "gatsby";
 
 export default function Banner() {
   return (
     <div className="container">
+      <div className={banner}>
       <h3>Our Partners</h3>
         <div className="row">
           <div className="col">
@@ -23,6 +24,7 @@ export default function Banner() {
           <div className="col">
             <p>place for your logo</p>
           </div>
+        </div>
         </div>
     </div>
   );
