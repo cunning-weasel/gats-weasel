@@ -5,27 +5,28 @@ import { StaticImage } from "gatsby-plugin-image";
 
 export default function Banner() {
   return (
-    <div className="container">
-      <div className={banner}>
+    <div className="containerBanner">
       <h3>Our Partners</h3>
-        <div className="row">
-          <div className="col">
-            <a href="https://digitalcareerinstitute.org/" target="_blank" rel="noopener noreferrer">
-              <StaticImage
+      <div className="row">
+        <div className="col">
+          <a
+            href="https://digitalcareerinstitute.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <StaticImage
               src="../images/Logos/partners/dci-logo-blue.png"
               alt="DCI it is a shortcut for Digital Career Institute, logo is in blue color."
               layout="fixed"
               width={200}
               height={200}
-              />
-            </a>
-          </div>
-
-          <div className="col">
-            <p>place for your logo</p>
-          </div>
+            />
+          </a>
         </div>
+        <div className="col">
+          <p>place for your logo</p>
         </div>
+      </div>
     </div>
   );
 }
