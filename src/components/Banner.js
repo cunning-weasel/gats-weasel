@@ -1,5 +1,5 @@
 import * as React from "react";
-import "./Banner.scss";
+import {banner} from "./Banner.module.scss";
 import { StaticImage } from "gatsby-plugin-image";
 //import { Link } from "gatsby";
 
