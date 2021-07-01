@@ -74,7 +74,7 @@ const Body = () => {
           </Container>
         </section>
 
-        {/* empower, knowledge, growth */}
+        {/* empower, knowledge, growth and yes*/}
         <section className="page-section-empower">
           <Container>
             <div className="empowerElems justify-content-center align-items-center">
