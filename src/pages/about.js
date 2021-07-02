@@ -1,13 +1,13 @@
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 
 // markup
 const AboutPage = () => {
   return (
     <Layout>
-      <SEO title="About" />
+      <Seo title="About" />
        <div className="container">
         <div className="row">
           <div className="col">
