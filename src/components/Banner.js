@@ -1,11 +1,11 @@
 import * as React from "react";
-import {banner} from "./Banner.module.scss";
+import  { banner } from "./Banner.module.scss";
 import { StaticImage } from "gatsby-plugin-image";
 //import { Link } from "gatsby";
 
 export default function Banner() {
   return (
-    <div className="containerBanner">
+    <div className={banner}>
       <h3>Our Partners</h3>
       <div className="row">
         <div className="col">

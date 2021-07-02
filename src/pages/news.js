@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Layout from "../components/Layout";
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 
 const News = () => {
   // graphQL api call
@@ -34,7 +34,7 @@ const News = () => {
 
   return (
     <Layout>
-      <SEO title="News"/>
+      <Seo title="News"/>
       <h2>News</h2>
       {data
         ? data.allGhostPost.edges.map(({ node }) => {
