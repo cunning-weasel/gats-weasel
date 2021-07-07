@@ -36,6 +36,11 @@ const SEO = ({ title, description, image, article }) => {
       )}
       {seo.image && <meta property="og:image" content={seo.image} />}
       <meta name="twitter:card" content="summary_large_image" />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        referepolicy="no-referrer"
+      />
     </Helmet>
   );
 };

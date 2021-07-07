@@ -2,7 +2,7 @@ import * as React from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import "./Nav.module.scss";
-import "./Body.scss";
+import "./Body.module.scss";
 import "./Banner.module.scss";
 import "./Footer.module.scss";
 import Button from "react-bootstrap/Button";
@@ -13,8 +13,7 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Banner from "../components/Banner";
 const Body = () => {
-  // rest - check param for edges
-  // console.log(`https://mindchase.ghost.io/ghost/api/v3/content/posts/?key=${process.env.GATSBY_CONTENT_API}`);
+  
   return (
     <>
       {/* jumbotron */}
@@ -23,16 +22,11 @@ const Body = () => {
           <div className="d-flex justify-content-center align-items-center">
             <div>
               <StaticImage
-                src="../images/Logos/jingle_easy-growing-for-everyone.png"
+                src="../images/background/website_with_logo.jpg"
                 alt="easy growing for everyone"
               />
             </div>
-            <div>
-              <StaticImage
-                src="../images/Logos/mindchase-logo-transparent.png"
-                alt="mindchase logo"
-              />
-            </div>
+        
           </div>
         </Container>
       </Jumbotron>
@@ -99,9 +93,8 @@ const Body = () => {
                     <li>Lorem ipsum dolor sit amet</li>
                   </ul>
                 </div>
-                <Button variant="danger">
-                  <Link to="/about">CHECK OUT OUR TEAM</Link>
-                </Button>
+                  <Link to="/about" className="btn btn-danger">CHECK OUT OUR TEAM</Link>
+                
               </div>
             </div>
           </Container>
@@ -110,7 +103,7 @@ const Body = () => {
         <section className="page-section-partners">
           <Container>
             <div className="partnersElems justify-content-center align-items-center">
-              <h2 className="underline">our partners</h2>
+            
               {/* we can think about doing some grid/ flex card layout for this? 
                   graphQL fetch from partners page?
               */}

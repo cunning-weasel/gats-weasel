@@ -6,11 +6,7 @@ import { footer } from "./Footer.module.scss";
 const Footer = () => {
   return (
     <div>
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        referepolicy="no-referrer"
-      />
+      
       <div className={footer}>
         <div className="socialicons">
           {/* <StaticImage
@@ -25,7 +21,7 @@ const Footer = () => {
             title="Instagram"
             className="icon"
           >
-            <i className="fab fa-instagram"></i>
+            <i className="fab fa-instagram"></i></a>
             <a
               href="https://www.linkedin.com/company/mindchase"
               title="LinkedIn"
@@ -33,7 +29,6 @@ const Footer = () => {
             >
               <i className="fab fa-linkedin-in"></i>
             </a>
-          </a>
         </div>
       </div>
     </div>
