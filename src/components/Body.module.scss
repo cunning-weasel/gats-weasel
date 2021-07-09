@@ -18,16 +18,19 @@
   margin-bottom: 5.5rem;
 }
 
-// underlines used in body
+// underlines used in body - need to fix up so it actually works
 .underline {
   //   margin-bottom: 2rem;
-  border-bottom: 2px solid red;
+  content: '';
+  display: block;
+  border-bottom: 2px solid #FB3449;
+  margin-top: 1.66667rem;
 }
 
-.btn-primary {
-  color: #fff;
-  background-color: red;
-}
+// .btn-primary {
+//   color: #fff;
+//   background-color: red;
+// }
 
 .introElems,
 .empowerElems {
@@ -53,6 +56,3 @@
   column-count: 2;
 }
 
-.bottom-cta {
-  background-color: #FF1616;
-}

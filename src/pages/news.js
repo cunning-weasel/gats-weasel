@@ -32,9 +32,12 @@ const News = () => {
     `
   );
 
+  // rest end-point incase GQL breaks again
+  // `https://demo.ghost.io/ghost/api/v3/content/posts/?key=22444f78447824223cefc48062`
+
   return (
     <Layout>
-      <Seo title="News"/>
+      <Seo title="News" />
       <h2>News</h2>
       {data
         ? data.allGhostPost.edges.map(({ node }) => {
