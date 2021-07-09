@@ -1,0 +1,58 @@
+// mouse-selection in red?
+::selection {
+  background: red;
+  color: #fff;
+}
+
+.p-5 {
+  background-image: url=("../../images/background/website_with_logo.jpg");
+  height: 100vh;
+}
+
+// save margin as var && nest
+.page-section-intro,
+.page-section-empower,
+.page-section-partners,
+.page-section-news {
+  margin-top: 5.5rem;
+  margin-bottom: 5.5rem;
+}
+
+// underlines used in body
+.underline {
+  //   margin-bottom: 2rem;
+  border-bottom: 2px solid red;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: red;
+}
+
+.introElems,
+.empowerElems {
+  display: flex;
+  flex-flow: row;
+}
+
+.partnersElems {
+  display: flex;
+  flex-flow: column;
+}
+
+// empowerImg resize
+.empowerImg {
+  max-width: 100%;
+  height: auto;
+}
+
+// split list-items into 2 columns
+.list-split {
+  columns: 2;
+  column-width: auto;
+  column-count: 2;
+}
+
+.bottom-cta {
+  background-color: #FF1616;
+}
