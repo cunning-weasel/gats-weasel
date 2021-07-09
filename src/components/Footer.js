@@ -9,13 +9,6 @@ const Footer = () => {
       
       <div className={footer}>
         <div className="socialicons">
-          {/* <StaticImage
-            src="../images/social_media/Linkedin_Banner_social_media.png"
-            alt="social media banner."
-            layout="fixed"
-            width={1300}
-            height={330}
-          /> */}
           <a
             href="https://www.instagram.com/mindchase2020/"
             title="Instagram"
