@@ -1,4 +1,5 @@
 import * as React from "react";
+import { footer } from "./Footer.module.scss";
 //import { StaticImage } from "gatsby-plugin-image";
 //import { Link } from "gatsby";
 
@@ -10,7 +11,7 @@ const Footer = () => {
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         referepolicy="no-referrer"
       />
-      <div className="wrapper">
+      <div className={footer}>
         <div className="socialicons">
           {/* <StaticImage
             src="../images/social_media/Linkedin_Banner_social_media.png"
