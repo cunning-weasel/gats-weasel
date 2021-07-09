@@ -34,7 +34,7 @@ const News = () => {
 
   return (
     <Layout>
-      <Seo title="News"/>
+      <Seo title="News" />
       <h2>News</h2>
       {data
         ? data.allGhostPost.edges.map(({ node }) => {
