@@ -121,13 +121,14 @@ const Body = () => {
                 <h3 className="mb-2 text-center text-uppercase text-white mb-3">
                   Join newsletter
                 </h3>
+
                 <Form.Control type="email" placeholder="Email*" />
                 <Link className="btn btn-danger btn-outline-light text-uppercase" type="submit">
                   submit
                 </Link>
                 <Form.Text className="text-white">
                   This is where I want "email must be formatted correctly" to
-                  show up
+                  render conditionally
                 </Form.Text>
               </Form.Group>
             </Col>
