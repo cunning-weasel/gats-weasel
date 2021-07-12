@@ -1,21 +1,19 @@
 import * as React from "react";
-import { Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
 import "./Nav.module.scss";
 import "./Body.module.scss";
 import "./Banner.module.scss";
 import "./Footer.module.scss";
-import Container from "react-bootstrap/Container";
-import Jumbotron from "react-bootstrap/Jumbotron";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Form from "react-bootstrap/Form";
 import Banner from "../components/Banner";
+import Header from "../components/indexBody/Header";
+import Workshops from "../components/indexBody/Workshops";
+import WhatWeDo from "../components/indexBody/WhatWeDo";
+import News from "../components/indexBody/News";
 
 
 const Body = () => {
   return (
     <>
+<<<<<<< HEAD
       {/* jumbotron */}
       <Jumbotron fluid className="p-5 bg-image">
         <Container>
@@ -116,6 +114,13 @@ const Body = () => {
 
         {/* sign-up form cta */}
       </main>
+=======
+      <Header />
+      <Workshops />
+      <WhatWeDo />
+      <Banner />
+      <News />
+>>>>>>> made code more modular, got news section firing - now design - yay (not) :/
     </>
   );
 };

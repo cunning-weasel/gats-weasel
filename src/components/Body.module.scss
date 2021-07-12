@@ -1,11 +1,12 @@
 // mouse-selection in red?
 ::selection {
-  background: red;
+  background: #FB3449;
   color: #fff;
 }
 
 .p-5 {
   height: 100vh;
+  background-size: cover;
 }
 
 // save margin as var && nest
