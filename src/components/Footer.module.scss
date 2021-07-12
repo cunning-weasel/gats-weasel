@@ -1,5 +1,5 @@
 .socialicons {
-    margin-top: 300px;
+    margin-top:200px;
     .icon {
       width: 300px;
       height: 100px;
@@ -12,7 +12,7 @@
       overflow: hidden;
       position: relative;
       &:hover {
-        color: red;
+        color: rgb(17, 16, 16);
         a {
           &:hover::after {
             bottom: 0;

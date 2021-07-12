@@ -1,9 +1,9 @@
 import * as React from "react";
-import { footer } from "./Footer.module.scss";
+import { socialicons, icon} from "./Footer.module.scss";
 //import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInstagram } from "@fortawesome/free-regular-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faInstagram } from "@fortawesome/free-regular-svg-icons";
 import Container from "react-bootstrap/Container";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Row from "react-bootstrap/Row";
@@ -15,7 +15,7 @@ const Footer = () => {
     <div>
       {/* <h1><FontAwesomeIcon icon={ faInstagram } /></h1> */}
 
-      <div className={footer}>
+      {/* <div className={footer}> */}
         <Form className="bg-danger text-align:center d-flex justify-content-center">
           <div className="row">
             <div className="col"> Contact</div>
@@ -44,20 +44,20 @@ const Footer = () => {
             </div>
 
             <div className="col">
-              <div className="socialicons">
+              <div className={socialicons}>
                 <a
                   href="https://www.instagram.com/mindchase2020/"
                   title="Instagram"
-                  className="icon"
+                  className={icon}
                 >
-                  <i className="fab fa-instagram fa-2x"></i>
+                  <i className="fab fa-instagram"></i>
                 </a>
                 <a
                   href="https://www.linkedin.com/company/mindchase"
                   title="LinkedIn"
-                  className="icon"
+                  className={icon}
                 >
-                  <i className="fab fa-linkedin-in fa-2x"></i>
+                  <i className="fab fa-linkedin-in"></i>
                 </a>
               </div>
             </div>
@@ -66,8 +66,8 @@ const Footer = () => {
             <div className="col"> All Rights Reserved</div>
           </div>
         </Form>
-      </div>
-    </div>
+      {/* </div> */}
+    </div> 
   );
 };
 export default Footer;
