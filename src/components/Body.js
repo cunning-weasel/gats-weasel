@@ -12,6 +12,7 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Banner from "../components/Banner";
 
+
 const Body = () => {
   return (
     <>
@@ -114,26 +115,6 @@ const Body = () => {
         </section>
 
         {/* sign-up form cta */}
-        <Form className="bg-danger text-align:center d-flex justify-content-center">
-          <Row>
-            <Col>
-              <Form.Group className="mt-5 mb-5" controlId="formBasicEmail">
-                <h3 className="mb-2 text-center text-uppercase text-white mb-3">
-                  Join newsletter
-                </h3>
-
-                <Form.Control type="email" placeholder="Email*" />
-                <Link className="btn btn-danger btn-outline-light text-uppercase" type="submit">
-                  submit
-                </Link>
-                <Form.Text className="text-white">
-                  This is where I want "email must be formatted correctly" to
-                  render conditionally
-                </Form.Text>
-              </Form.Group>
-            </Col>
-          </Row>
-        </Form>
       </main>
     </>
   );
