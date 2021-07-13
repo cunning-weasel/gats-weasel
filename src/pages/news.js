@@ -4,7 +4,8 @@ import Layout from "../components/Layout";
 import Seo from "../components/seo";
 
 const News = () => {
-  // graphQL api call
+  // note to self - incorporate pagination and some other 
+  // juju to make this nicer - weasel
   const data = useStaticQuery(
     graphql`
       query {
@@ -31,9 +32,6 @@ const News = () => {
       }
     `
   );
-
-  // rest end-point incase GQL breaks again
-  // `https://demo.ghost.io/ghost/api/v3/content/posts/?key=22444f78447824223cefc48062`
 
   return (
     <Layout>
