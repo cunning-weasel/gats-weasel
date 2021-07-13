@@ -13,7 +13,7 @@ const AboutPage = () => {
           <div className="col">
             <StaticImage
               alt="Marco, the only man on a team"
-              src="../images/Marco/marco.jpg"
+              src="../images/team/Marco/marco.jpg"
               layout="fixed"
               width={300}
               height={300}
@@ -23,7 +23,7 @@ const AboutPage = () => {
           <div className="col">
             <StaticImage
               alt="Karo, CEO of mindchase"
-              src="../images/Karo/karo.JPG"
+              src="../images/team/Karo/karo.JPG"
               layout="fixed"
               width={300}
               height={300}
@@ -33,7 +33,7 @@ const AboutPage = () => {
           <div className="col">
             <StaticImage
               alt="Phyllis"
-              src="../images/Phyllis/phyllis.JPG"
+              src="../images/team/Phyllis/phyllis.JPG"
               layout="fixed"
               width={300}
               height={400}
@@ -45,7 +45,7 @@ const AboutPage = () => {
           <div className="col">
             <StaticImage
               alt="Kathleen"
-              src="../images/Kathleen/kathleen.JPEG"
+              src="../images/team/Kathleen/kathleen.JPEG"
               layout="fixed"
               width={300}
               height={300}
@@ -54,7 +54,7 @@ const AboutPage = () => {
           <div className="col">
             <StaticImage
               alt="Franzi, second CEO of mindchase"
-              src="../images/Franzi/franzi.jpg"
+              src="../images/team/Franzi/franzi.jpg"
               layout="fixed"
               width={300}
               height={300}

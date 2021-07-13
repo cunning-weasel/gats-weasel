@@ -11,35 +11,14 @@ function Workshops() {
       <Seo title="Workshops" />
       <div className="container">
         <div className="row">
-          <div className="card  m-3 bg-warning col">
-            <StaticImage
-              className="img-workshops"
-              alt="workshps 1"
-              src="../images/Logos/mindchase_Logo komplett transparent.png"
-              layout="fixed"
-              width={200}
-              height={200}
-            />
-            <h2>Presentation skills</h2>
 
-            <div className="card-body">
-              <p className="card-text">
-                What if you are standing in a crowd o people and everyone is
-                eagerly listening to your every word
-              </p>
-            </div>
-            <a href="#" class="card-link">
-              read more
-            </a>
-          </div>
-
-          <div className="card m-3 bg-warning col">
+        <div className="card m-3 bg-warning col">
             <StaticImage
-              className="img-work"
+              className="image-workshops"
               alt="workshps 1"
-              src="../images/Logos/mindchase-symbol-big.png"
+              src="../images/workshops/empowerment/empowerment.jpg"
               layout="fixed"
-              width={200}
+              width={300}
               height={200}
             />
             <h2>Empowerment</h2>
@@ -58,11 +37,33 @@ function Workshops() {
 
           <div className="card m-3 bg-warning col">
             <StaticImage
-              className="img-work"
-              alt="workshps 1"
-              src="../images/Logos/mindchase-logo-transparent.png"
+              className="image-workshops"
+              alt="A woman presenting the topic for a client during a business meeting."
+              src="../images/workshops/presentation_skills/presentation_skills.jpg"
               layout="fixed"
-              width={200}
+              width={300}
+              height={200}
+            />
+            <h2>Presentation skills</h2>
+
+            <div className="card-body">
+              <p className="card-text">
+                What if you are standing in a crowd o people and everyone is
+                eagerly listening to your every word
+              </p>
+            </div>
+            <a href="#" class="card-link">
+              read more
+            </a>
+          </div>
+
+          <div className="card m-3 bg-warning col">
+            <StaticImage
+              className="image-workshops"
+              alt="A little boy sitting in a box, pretending to be an astronaut in a spcerocket, ready to fly."
+              src="../images/workshops/motivation/motivation.jpg"
+              layout="fixed"
+              width={300}
               height={200}
             />
             <h2>Motivation</h2>
@@ -83,11 +84,11 @@ function Workshops() {
         <div className="row">
           <div className="card m-3 bg-warning col">
             <StaticImage
-              className="img-work"
-              alt="workshps 1"
-              src="../images/Logos/mindchase-logo-transparent.png"
+              className="image-workshops"
+              alt="A smiling man stands in front of a wall on which strong arms are painted. It is a symbolically depicted power that lies  dormant in it."
+              src="../images/workshops/self_confidence/self_confidence.jpg"
               layout="fixed"
-              width={200}
+              width={300}
               height={200}
             />
             <h2>Self-confidence</h2>
@@ -106,11 +107,11 @@ function Workshops() {
 
           <div className="card m-3 bg-warning col">
             <StaticImage
-              className="img-work"
-              alt="workshps 1"
-              src="../images/Logos/mindchase-logo-transparent.png"
+              className="image-workshops"
+              alt="Alarm clock between the palms and the darnkes arround."
+              src="../images/workshops/time_management/time_management3.jpg"
               layout="fixed"
-              width={200}
+              width={300}
               height={200}
             />
             <h2>Time Management</h2>
@@ -129,16 +130,16 @@ function Workshops() {
 
           <div className="card m-3 bg-warning col">
             <StaticImage
-              className="img-work"
-              alt="workshps 1"
-              src="../images/Logos/mindchase-logo-transparent.png"
+              className="image-workshops"
+              alt="A woman leaning against a wall, savoring the rays of the sun."
+              src="../images/workshops/stress_management/stress_management.jpg"
               layout="fixed"
-              width={200}
+              width={300}
               height={200}
             />
             <h2>Stress Management</h2>
             <div className="card-body">
-              <p className="card-text">What if </p>
+              <p className="card-text">What if.. </p>
             </div>
             <a href="#" class="card-link">
               read more
