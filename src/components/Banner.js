@@ -1,6 +1,7 @@
 import * as React from "react";
 import "./Banner.module.scss";
 import { StaticImage } from "gatsby-plugin-image";
+
 //import { Link } from "gatsby";
 
 export default function Banner() {
