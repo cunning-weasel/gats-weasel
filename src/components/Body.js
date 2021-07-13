@@ -12,7 +12,6 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Banner from "../components/Banner";
 
-
 const Body = () => {
   return (
     <>
@@ -25,6 +24,7 @@ const Body = () => {
                 src="../images/background/website_with_logo.jpg"
                 alt="easy growing for everyone"
               />
+            
             </div>
           </div>
         </Container>

@@ -1,5 +1,5 @@
 import * as React from "react";
-import "./Nav.module.scss";
+import { Navbar } from "./Nav.module.scss";
 import { Link } from "gatsby";
 
 const Nav = () => {
@@ -15,6 +15,7 @@ const Nav = () => {
   };
 
   return (
+    <div className={Navbar}>
     <nav className="navbar navbar-expand-lg navbar-light bg-transparent ">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
@@ -107,6 +108,7 @@ const Nav = () => {
         </div>
       </div>
     </nav>
+    </div>
   );
 };
 
