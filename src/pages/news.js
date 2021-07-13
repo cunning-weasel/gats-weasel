@@ -4,7 +4,8 @@ import Layout from "../components/Layout";
 import Seo from "../components/seo";
 
 const News = () => {
-  // graphQL api call
+  // note to self - incorporate pagination and some other 
+  // juju to make this nicer - weasel
   const data = useStaticQuery(
     graphql`
       query {

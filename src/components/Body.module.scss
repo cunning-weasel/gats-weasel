@@ -4,11 +4,6 @@
   color: #fff;
 }
 
-.p-5 {
-  height: 100vh;
-  background-size: cover;
-}
-
 // save margin as var && nest
 .page-section-intro,
 .page-section-empower,
@@ -27,11 +22,6 @@
   margin-top: 1.66667rem;
 }
 
-// .btn-primary {
-//   color: #fff;
-//   background-color: red;
-// }
-
 .introElems,
 .empowerElems {
   display: flex;
@@ -41,18 +31,5 @@
 .partnersElems {
   display: flex;
   flex-flow: column;
-}
-
-// empowerImg resize
-.empowerImg {
-  max-width: 100%;
-  height: auto;
-}
-
-// split list-items into 2 columns
-.list-split {
-  columns: 2;
-  column-width: auto;
-  column-count: 2;
 }
 

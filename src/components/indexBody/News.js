@@ -1,6 +1,13 @@
 import React from "react";
+import CardGroup from "react-bootstrap/CardGroup";
+import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Button from "react-bootstrap/Button";
 import { useStaticQuery, graphql } from "gatsby";
+import { StaticImage, GatsbyImage } from "gatsby-plugin-image";
+import { Link } from "gatsby";
 
 const News = () => {
   const data = useStaticQuery(
@@ -11,6 +18,7 @@ const News = () => {
             node {
               id
               title
+              feature_image
             }
           }
         }
@@ -18,23 +26,34 @@ const News = () => {
     `
   );
 
+  // note to self - use filter in GQL query for latest 3 posts
+
   return (
-    <section className="page-section-news">
-      <Container>
-        <div className="newsElems justify-content-center align-items-center">
-          <h2 className="underline">news? / our work??</h2>
-          {data &&
-            data.allGhostPost.edges.map(({ node }) => {
-              return (
-                <div key={node.id}>
-                  <h1>{node.title}</h1>
-                  <article dangerouslySetInnerHTML={{ __html: node.html }} />
-                </div>
-              );
-            })}
-        </div>
-      </Container>
-    </section>
+    <Container>
+      <h2>
+        <u>Stay Updated</u>
+      </h2>
+      {data &&
+        data.allGhostPost.edges.map(({ node }) => {
+          return (
+            <Row>
+              <Link to="/news">
+                <Card key={node.id} style={{ width: "18rem" }}>
+                  <Card.Img variant="top" src={node.feature_image} />
+                  {/* <GatsbyImage src={node.feature_image} alt="" /> */}
+                  {/* <StaticImage src={node.feature_image} alt="" /> */}
+                  <Card.Body>
+                    <Card.Title>{node.title}</Card.Title>
+                    <Button variant="danger" className="text-uppercase">
+                      read more
+                    </Button>
+                  </Card.Body>
+                </Card>
+              </Link>
+            </Row>
+          );
+        })}
+    </Container>
   );
 };
 

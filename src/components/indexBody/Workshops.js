@@ -14,20 +14,22 @@ const Workshops = () => {
           </Col>
           <Col>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Accusamus, autem, fugiat voluptatem in consequatur repellendus
-              doloribus incidunt aliquam maxime expedita fuga perferendis nulla
-              consequuntur, voluptate dolorum tempora excepturi ipsum quibusdam?
+              We are a Team of 5 ambitious, young people, full of ideas,
+              inspirations and a common goal: to create a place for personal and
+              professional development, where people of different ages and
+              cultural backgrounds feel inspired to shape their professional and
+              personal lives (and grow beyond their borders?).
             </p>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Accusamus,aliquam maxime expedit.
+              Our work as a team consists of preparing the content of our
+              various workshops, acquiring new partners, and brainstorming about
+              new opportunities to bring our knowledge and expertise to an even
+              wider audience.{" "}
             </p>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Accusamus, autem, fugiat voluptatem in consequatur repellendus
-              doloribus incidunt aliquam maxime expedita fuga perferendis nulla
-              consequuntur, voluptate dolorum tempora excepturi ipsum quibusdam?
+              We work in agile sprints to expand our portfolio in a short time.
+              When we're not spending a digital workday together, we're still
+              constantly exchanging new ideas and suggestions via social media.
             </p>
             <Link to="/workshops" className="btn btn-danger text-uppercase">
               our workshops
