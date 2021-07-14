@@ -1,9 +1,7 @@
 import React from "react";
-import CardGroup from "react-bootstrap/CardGroup";
 import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import { useStaticQuery, graphql } from "gatsby";
 import { StaticImage, GatsbyImage } from "gatsby-plugin-image";
@@ -27,7 +25,6 @@ const News = () => {
   );
 
   // note to self - use filter in GQL query for latest 3 posts
-
   return (
     <Container>
       <h2>

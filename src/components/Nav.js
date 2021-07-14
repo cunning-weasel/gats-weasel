@@ -1,6 +1,8 @@
 import * as React from "react";
 import { Navbar } from "./Nav.module.scss";
 import { Link } from "gatsby";
+import "./Nav.module.scss";
+
 
 const Nav = () => {
   const [showMobile, setShowMobile] = React.useState(false);

@@ -1,4 +1,8 @@
 import * as React from "react";
+<<<<<<< HEAD
+=======
+import "./Body.module.scss";
+>>>>>>> stashing before pulling
 import Banner from "../components/Banner";
 import Header from "../components/indexBody/Header";
 import Workshops from "../components/indexBody/Workshops";

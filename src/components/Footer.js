@@ -1,5 +1,6 @@
 import * as React from "react";
 import { socialicons, icon} from "./Footer.module.scss";
+import "./Footer.module.scss";
 //import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,6 +11,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Banner from "../components/Banner";
+
 const Footer = () => {
   return (
     <div>
