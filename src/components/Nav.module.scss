@@ -1,4 +1,14 @@
 .Navbar:hover{
-    background-color:chartreuse;
-    justify-content: center;
+    background-color:whitesmoke;
+   
+}
+
+.navItem{
+    .nav-link{
+         color: red; 
+    }
+  
+}
+.Navbar{
+    z-index: 1030;
 }

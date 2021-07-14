@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <Jumbotron fluid className="bg-image">
       <StaticImage
-        src="../images/background/website_with_logo.jpg"
+        src="../../images/background/website_with_logo.jpg"
         alt=""
         style={{ 
           width: "100%",
