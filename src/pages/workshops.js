@@ -169,7 +169,7 @@ function Workshops() {
               <div className="card-body">
                 <p className="card-text">
                   <h5>What if… You can finally breathe deeply?</h5>
-                  In this workshop You will learn how to:
+                  <p>In this workshop You will learn how to:</p>
                   <ul>
                     <li>identify stressors in your daily life and analyze your personal stress level</li>
                     <li>manage and release stress with simple tricks</li>
