@@ -25,8 +25,8 @@ export default function Banner() {
           </a>
         </div>
         {/* <div className="col">
-          <p>---place for your logo---</p>
-        </div> */}
+        <p>---place for your logo---</p>
+      </div> */}
       </div>
     </div>
   );
