@@ -21,7 +21,7 @@ const WhatWeDo = () => {
             </Col>
             <Col>
               <div className="underline">
-                <h2>Empower, Knowledge, Growth, Education and Training</h2>
+                <h2 className="display-6 w-bold">Empower, Knowledge, Growth, Education and Training</h2>
               </div>
               <div>
                 <ul className={listSplit}>
