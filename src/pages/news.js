@@ -3,7 +3,6 @@ import { useStaticQuery, graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Seo from "../components/seo";
 import { StaticImage } from "gatsby-plugin-image";
-import Carousel from "react-bootstrap/Carousel";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
@@ -12,44 +11,45 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/Dropdown";
 import Card from "react-bootstrap/Card";
 
-const News = () => {
+const News = ({pageContext}) => {
   // note to self - incorporate pagination and some other
   // juju to make this nicer. and also export - weasel
   // <article dangerouslySetInnerHTML={{ __html: node.html }} />
-
   const data = useStaticQuery(
     graphql`
-      query {
-        allGhostPost {
+      query ($skip: Int!, $limit: Int!) {
+        allGhostPost(
+          sort: { fields: [created_at], order: DESC }
+          skip: $skip
+          limit: $limit
+        ) {
           edges {
             node {
-              id
+              excerpt
+              featured
+              updated_at
               title
-              feature_image
-              html
-              published_at
-              tags {
-                id
-                name
-                slug
-              }
-              authors {
-                id
-                name
-                profile_image
-              }
             }
           }
         }
       }
     `
   );
+  
+  // check pageContext props
+  const posts = data.allGhostPost.edges;
+  console.log(pageContext);
+  const { currentPage, numPages } = pageContext;
+  const isFirst = currentPage === 1;
+  const isLast = currentPage === numPages;
+  const prevPage = currentPage - 1 === 1 ? "/" : (currentPage - 1).toString();
+  const nextPage = (currentPage + 1).toString();
 
   return (
     <Layout>
       <Seo title="News" />
 
-      {/* dynamic hero/ header */}
+      {/* dynamic hero/ header - good to go*/}
       <Container fluid className="p-5 mb-4 bg-light border-bottom">
         <Row fluid className="py-5">
           <Col>
@@ -72,7 +72,7 @@ const News = () => {
         </Row>
       </Container>
 
-      {/* search/ filter/ dropdowns for tags - use one topic for all? */}
+      {/* search/ filter/ dropdowns for tags - good to go */}
       <Container>
         <Row>
           <Col>
@@ -87,22 +87,39 @@ const News = () => {
               <Dropdown.Item href="#/action-3">Self-Confidence</Dropdown.Item>
             </DropdownButton>
           </Col>
-          <Col>
-            <DropdownButton
-              variant="outline-dark"
-              title="other things to filter by tag?"
-            >
-              <Dropdown.Item href="#/action-1">1 weasel</Dropdown.Item>
-              <Dropdown.Item href="#/action-2">2 weasels</Dropdown.Item>
-            </DropdownButton>
-          </Col>
         </Row>
       </Container>
-      
+
       {/* pull out this component ? */}
       <Container>
         <Row>
-          {data &&
+          {posts.map(({ node }) => {
+            const title = node.created_at || node.fields.slug;
+            return <div key={node.fields.slug}>{title}</div>
+          })}
+
+          {Array.from({ length: numPages }, (_, i) => (
+            <Link
+              key={`pagination-number${i + 1}`}
+              to={`/${i === 0 ? "" : i + 1}`}
+            >
+              {i + 1}
+            </Link>
+          ))}
+
+          {!isFirst && (
+            <Link to={prevPage} rel="prev">
+              ← Previous Page
+            </Link>
+          )}
+          {!isLast && (
+            <Link to={nextPage} rel="next">
+              Next Page →
+            </Link>
+          )}
+
+          {/* old map */}
+          {/* {data &&
             data.allGhostPost.edges.map(({ node }) => {
               return (
                 <Col>
@@ -110,7 +127,9 @@ const News = () => {
                     <Card.Img variant="top" src={node.feature_image} />
                     <Card.Body>
                       <Card.Title>{node.title}</Card.Title>
-                      <article dangerouslySetInnerHTML={{ __html: node.tags.slug }} />
+                      <article
+                        dangerouslySetInnerHTML={{ __html: node.tags.slug }}
+                      />
                       {node.tags.slug}
                       <Button variant="danger" className="text-uppercase">
                         read more
@@ -119,7 +138,7 @@ const News = () => {
                   </Card>
                 </Col>
               );
-            })}
+            })} */}
         </Row>
       </Container>
     </Layout>
