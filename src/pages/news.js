@@ -106,7 +106,7 @@ const News = () => {
           </Col>
         </Row>
       </Container>
-
+      
       {/* pull out this component ? */}
 
       <Container>
