@@ -3,18 +3,19 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { Link } from "gatsby";
+import"../Body.module.scss";
 
 const Workshops = () => {
   return (
     <section className="mt-5 mb-5">
       <Container>
         <Row>
-          <Col className="underline">
-            <h2>Delivering Knowledge To All</h2>
+          <Col>
+            <h2 className="display-6 w-bold lh-1 underline">Delivering Knowledge To All</h2>
           </Col>
           <Col>
             <p>
-              We are a Team of 5 ambitious, young people, full of ideas,
+              Mindchase is a Team of 5 ambitious, young people, full of ideas,
               inspirations and a common goal: to create a place for personal and
               professional development, where people of different ages and
               cultural backgrounds feel inspired to shape their professional and

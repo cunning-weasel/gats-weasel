@@ -5,12 +5,9 @@ import "./Footer.module.scss";
 import { Link } from "gatsby";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faInstagram } from "@fortawesome/free-regular-svg-icons";
-import Container from "react-bootstrap/Container";
-import Jumbotron from "react-bootstrap/Jumbotron";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
-import Banner from "../components/Banner";
 
 const Footer = () => {
   return (

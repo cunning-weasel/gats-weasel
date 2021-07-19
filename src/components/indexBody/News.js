@@ -4,15 +4,15 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
-import { useStaticQuery, graphql } from "gatsby";
-import { StaticImage, GatsbyImage } from "gatsby-plugin-image";
-import { Link } from "gatsby";
+import { useStaticQuery, graphql, Link } from "gatsby";
+import "./News.module.scss";
+// import { StaticImage, GatsbyImage } from "gatsby-plugin-image";
 
 const News = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        allGhostPost(limit: 3) {
+        allGhostPost(limit: 3 sort: { order: DESC, fields: [published_at] }) {
           edges {
             node {
               id
@@ -24,7 +24,7 @@ const News = () => {
       }
     `
   );
-      
+  
   // note to self - use filter in GQL query for latest 3 posts - sort news section first
   return (
     <>

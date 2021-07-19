@@ -6,7 +6,6 @@ import { StaticImage } from "gatsby-plugin-image";
 import { useState, useEffect } from "react"
 import { color } from "./Nav.module.scss"
 
-
 const Nav = () => {
 
   const [showMobile, setShowMobile] = useState(false);
