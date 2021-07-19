@@ -2,14 +2,16 @@ import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 //import "bootstrap/dist/css/bootstrap.min.css";
 //import '../components/Style.scss';
-import { h1, wrapper, cols, col, container, front, inner, back } from "../pages/workshops.module.scss";
+//import { h1, wrapper, cols, col, container, front, inner, back } from "../pages/workshops.module.scss";
 import Layout from "../components/Layout";
 import Seo from "../components/seo";
+import Cards from "../components/Cards";
 
 function Workshops() {
   return (
     <Layout>
       <Seo title="Workshops" />
+      <Cards />
 
       {/* <div className="container">
         <div className="row">
@@ -184,7 +186,7 @@ function Workshops() {
           </div>
         </div>
       </div> */}
-
+{/* 
         <div class="wrapper">
           <h1>Workshops</h1>
           <div class="cols">
@@ -398,7 +400,7 @@ function Workshops() {
               </div>
             </div>
           </div>
-        </div>;
+        </div>; */}
 
     </Layout>
   );

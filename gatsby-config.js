@@ -16,6 +16,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-fontawesome-css`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-ghost`,
       options: {
