@@ -24,7 +24,7 @@ const Nav = () => {
    if(window.scrollY < 73){
      setColor("navbar-light")
    }else if(window.scrollY > 70){
-     setColor("bg-info navbar-light")
+     setColor("bg-light navbar-light")
    }
   }
 

@@ -16,7 +16,7 @@ export default function Banner() {
             rel="noopener noreferrer"
           >
             <StaticImage
-              src="../images/Logos/partners/dci-logo-blue.png"
+              src="../images/logos/partners/dci-logo-blue.png"
               alt="DCI it is a shortcut for Digital Career Institute, logo is in blue color."
               layout="fixed"
               width={200}
