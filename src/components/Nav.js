@@ -1,11 +1,15 @@
 import * as React from "react";
-import { Navbar, navItem } from "./Nav.module.scss";
+//import { Navbar, navItem } from "./Nav.module.scss";
 import { Link } from "gatsby";
 import "./Nav.module.scss";
 import { StaticImage } from "gatsby-plugin-image";
+import { useState, useEffect } from "react"
+import { color } from "./Nav.module.scss"
+
 
 const Nav = () => {
-  const [showMobile, setShowMobile] = React.useState(false);
+
+  const [showMobile, setShowMobile] = useState(false);
   const showMobileNav = (e) => {
     e.preventDefault();
     if (showMobile) {
@@ -16,14 +20,30 @@ const Nav = () => {
     setShowMobile(!showMobile);
   };
 
+  const [color, setColor]= useState("navbar")
+  const scrollFunc = (e) => {
+   if(window.scrollY < 73){
+     setColor("navbar-light")
+   }else if(window.scrollY > 70){
+     setColor("bg-info navbar-light")
+   }
+  }
+
+  useEffect(() =>{
+    window.addEventListener("scroll", scrollFunc) 
+   return ()=> window.removeEventListener("scroll", scrollFunc)
+  },[])
+
+  console.log("color", color)
+
   return (
-    <div className={Navbar}>
-      <nav className="navbar navbar-expand-lg navbar-light fixed-top bg-transparent ">
+    <div className={`${color} fixed-top`}>
+      <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
             <StaticImage
               className="navbar-brand"
-              src="../images/Logos/mindchase-logo-transparent.png"
+              src="../images/logos/mindchase-logo-transparent.png"
               alt=""
               style={{
                 width: "150px",
@@ -46,29 +66,29 @@ const Nav = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className={navItem}>
+              <li className="navItem">
                 <Link className="nav-link" to="/about">
                   About
                 </Link>
               </li>
-              <li className={navItem}>
+              <li className="navItem">
                 <Link className="nav-link" to="/workshops">
                   Workshops
                 </Link>
               </li>
-              <li className={navItem}>
+              <li className="navItem">
                 <li>
                   <a href="https://campus.mindchase.de" className="nav-link">
                     Digital Campus
                   </a>
                 </li>
               </li>
-              <li className={navItem}>
+              <li className="navItem">
                 <Link className="nav-link" to="/news">
                   News
                 </Link>
               </li>
-              <li className={navItem}>
+              <li className="navItem">
                 <Link className="nav-link" to="/contact">
                   Contact
                 </Link>
