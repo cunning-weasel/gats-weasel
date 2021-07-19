@@ -6,65 +6,82 @@ import { StaticImage } from "gatsby-plugin-image";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import Image from "react-bootstrap/Image";
 import Container from "react-bootstrap/Container";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/Dropdown";
 import Card from "react-bootstrap/Card";
 
-const News = ({pageContext}) => {
-  // note to self - incorporate pagination and some other
-  // juju to make this nicer. and also export - weasel
-  // <article dangerouslySetInnerHTML={{ __html: node.html }} />
+{
+  /* <article
+dangerouslySetInnerHTML={{ __html: node.tags.slug }}
+/> */
+}
+
+const News = () => {
   const data = useStaticQuery(
     graphql`
-      query ($skip: Int!, $limit: Int!) {
-        allGhostPost(
-          sort: { fields: [created_at], order: DESC }
-          skip: $skip
-          limit: $limit
-        ) {
+      query {
+        allGhostPost {
           edges {
             node {
-              excerpt
-              featured
-              updated_at
+              id
               title
+              feature_image
+              html
+              published_at
+              excerpt
+              tags {
+                id
+                name
+                slug
+              }
+              authors {
+                id
+                name
+                profile_image
+              }
             }
           }
         }
       }
     `
   );
-  
-  // check pageContext props
-  const posts = data.allGhostPost.edges;
-  console.log(pageContext);
-  const { currentPage, numPages } = pageContext;
-  const isFirst = currentPage === 1;
-  const isLast = currentPage === numPages;
-  const prevPage = currentPage - 1 === 1 ? "/" : (currentPage - 1).toString();
-  const nextPage = (currentPage + 1).toString();
+
+  // console.log(data.allGhostPost.edges.node);
 
   return (
     <Layout>
       <Seo title="News" />
 
-      {/* dynamic hero/ header - good to go*/}
+      {/* hero/ header - loop through for featured tags */}
       <Container fluid className="p-5 mb-4 bg-light border-bottom">
         <Row fluid className="py-5">
-          <Col>
-            <img
-              src="https://www.agentur-jungesherz.de/ajh-content/uploads/2015/09/Recruiting-Agentur_02.jpg"
-              className="img-fluid"
+          <Col xs={12} md={6}>
+            <Image
+              src={data.allGhostPost.edges[0].node.feature_image}
+              fluid
               alt=""
             />
           </Col>
-          <Col>
+          <Col xs={12} md={6}>
             <Button variant="outline-dark" size="sm">
-              post tag
+              {data.allGhostPost.edges[1].node.tags[0].name}
             </Button>
-            <h1 className="display-5 fw-bold">dynamic title</h1>
-            <p>dynamic author w/ post date</p>
+            <h1 className="display-5 fw-bold">
+              {data.allGhostPost.edges[0].node.title}
+            </h1>
+            <p>
+              by{" "}
+              <a
+                href="{data.allGhostPost.edges[0].node.authors[0].url}"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {data.allGhostPost.edges[0].node.authors[0].name}
+              </a>{" "}
+              on {data.allGhostPost.edges[0].node.published_at}
+            </p>
             <Button variant="danger" className="text-uppercase">
               read more
             </Button>
@@ -91,14 +108,33 @@ const News = ({pageContext}) => {
       </Container>
 
       {/* pull out this component ? */}
+
       <Container>
         <Row>
-          {posts.map(({ node }) => {
-            const title = node.created_at || node.fields.slug;
-            return <div key={node.fields.slug}>{title}</div>
-          })}
+          {data &&
+            data.allGhostPost.edges.map(({ node }) => {
+              return (
+                <Col>
+                  <Link to={node.title}>
+                    <Card key={node.id} style={{ width: "18rem" }}>
+                      <Card.Img variant="top" src={node.feature_image} />
+                      <Card.Body>
+                        <Card.Title>{node.title}</Card.Title>
+                        {node.excerpt}
+                        <Button variant="danger" className="text-uppercase">
+                          read more
+                        </Button>
+                      </Card.Body>
+                    </Card>
+                  </Link>
+                </Col>
+              );
+            })}
+        </Row>
+      </Container>
 
-          {Array.from({ length: numPages }, (_, i) => (
+      {/* pagination */}
+      {/* {Array.from({ length: numPages }, (_, i) => (
             <Link
               key={`pagination-number${i + 1}`}
               to={`/${i === 0 ? "" : i + 1}`}
@@ -116,31 +152,7 @@ const News = ({pageContext}) => {
             <Link to={nextPage} rel="next">
               Next Page →
             </Link>
-          )}
-
-          {/* old map */}
-          {/* {data &&
-            data.allGhostPost.edges.map(({ node }) => {
-              return (
-                <Col>
-                  <Card key={node.id} style={{ width: "18rem" }}>
-                    <Card.Img variant="top" src={node.feature_image} />
-                    <Card.Body>
-                      <Card.Title>{node.title}</Card.Title>
-                      <article
-                        dangerouslySetInnerHTML={{ __html: node.tags.slug }}
-                      />
-                      {node.tags.slug}
-                      <Button variant="danger" className="text-uppercase">
-                        read more
-                      </Button>
-                    </Card.Body>
-                  </Card>
-                </Col>
-              );
-            })} */}
-        </Row>
-      </Container>
+          )} */}
     </Layout>
   );
 };
