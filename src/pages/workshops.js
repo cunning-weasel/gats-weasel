@@ -5,7 +5,6 @@ import { StaticImage } from "gatsby-plugin-image";
 //import { h1, wrapper, cols, col, container, front, inner, back } from "../pages/workshops.module.scss";
 import Layout from "../components/Layout";
 import Seo from "../components/seo";
-import Cards from "../components/Cards";
 
 function Workshops() {
   return (
@@ -13,13 +12,6 @@ function Workshops() {
       <Seo title="Workshops" />
 
       <div className="container">
-        <div className="row">
-          <div className="col">
-            <Cards />
-          </div>
-        </div>
-      </div>
-      {/* <div className="container">
         <div className="row">
           <div className="col">
             <div className="card">
@@ -191,7 +183,8 @@ function Workshops() {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
+      
       {/* 
         <div class="wrapper">
           <h1>Workshops</h1>
