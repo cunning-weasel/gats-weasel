@@ -25,6 +25,7 @@ const Cards = () => {
 
 export default Cards
 
+
 const CardsContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -33,17 +34,16 @@ const CardsContainer = styled.div`
     -webkit-perspective: 1000px;
     perspective: 1000px;
     transform-style: preserved-3d;
-
     &flipped {
         z-index: 1;
     }
-    `
+`
 
 const CardsSide= css`
     width: 100%;
     min-width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction; column;
     justify-content: space-between;
     -moz-backface-visibility: hidden;
     -webkit-backface-visibility: hidden;

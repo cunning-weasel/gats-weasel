@@ -11,8 +11,14 @@ function Workshops() {
   return (
     <Layout>
       <Seo title="Workshops" />
-      <Cards />
 
+      <div className="container">
+        <div className="row">
+          <div className="col">
+            <Cards />
+          </div>
+        </div>
+      </div>
       {/* <div className="container">
         <div className="row">
           <div className="col">
@@ -186,7 +192,7 @@ function Workshops() {
           </div>
         </div>
       </div> */}
-{/* 
+      {/* 
         <div class="wrapper">
           <h1>Workshops</h1>
           <div class="cols">
@@ -401,7 +407,6 @@ function Workshops() {
             </div>
           </div>
         </div>; */}
-
     </Layout>
   );
 }
