@@ -36,7 +36,7 @@ const Nav = () => {
   console.log("color", color)
 
   return (
-    <div className={`${color} fixed-top`}>
+    <div className={`${color} `}>
       <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
