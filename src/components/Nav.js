@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 import "./Nav.module.scss";
 import { StaticImage } from "gatsby-plugin-image";
 import { useState, useEffect } from "react"
-import { color } from "./Nav.module.scss"
+//import { color } from "./Nav.module.scss"
 
 const Nav = () => {
 

@@ -1,9 +1,9 @@
 import * as React from "react";
 import Body from "../components/Body";
-import PopUp from "../components/Modal";
+//import PopUp from "../components/Modal";
 import Layout from "../components/Layout";
 import Seo from "../components/seo";
-import { StaticImage } from "gatsby-plugin-image"
+//import { StaticImage } from "gatsby-plugin-image"
 
 
 
