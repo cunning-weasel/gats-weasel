@@ -1,10 +1,15 @@
-body {
-  background-color: white;
-}
+// need to import these files and
+// stash in bootstrap vars or something
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+body {
+  background-color: #f0e7e1;
+  color: #1a3457;
+  font-family: "Montserrat", sans-serif;
+}
 // mouse-selection in red?
 ::selection {
-  background: #FB3449;
+  background: #fb3449;
   color: #fff;
 }
 
@@ -20,10 +25,12 @@ body {
 // underlines used in body - need to fix up so it actually works
 .underline {
   //   margin-bottom: 2rem;
-  content: '';
-  display: block;
-  border-bottom: 2px solid #FB3449;
+  content: "";
+  display: inline-block;
+  border-bottom: 2px solid #fb3449;
   margin-top: 1.66667rem;
+  width: 4.44444rem;
+  padding-bottom: 0.8em;
 }
 
 .introElems,
@@ -36,4 +43,3 @@ body {
   display: flex;
   flex-flow: column;
 }
-
