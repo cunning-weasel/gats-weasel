@@ -49,7 +49,7 @@ const News = () => {
   );
 
   // console.log(data.allGhostPost.edges.node);
-
+  
   return (
     <Layout>
       <Seo title="News" />
@@ -72,15 +72,8 @@ const News = () => {
               {data.allGhostPost.edges[0].node.title}
             </h1>
             <p>
-              by{" "}
-              <a
-                href="{data.allGhostPost.edges[0].node.authors[0].url}"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {data.allGhostPost.edges[0].node.authors[0].name}
-              </a>{" "}
-              on {data.allGhostPost.edges[0].node.published_at}
+              by {data.allGhostPost.edges[0].node.authors[0].name} on{" "}
+              {data.allGhostPost.edges[0].node.published_at}
             </p>
             <Button variant="danger" className="text-uppercase">
               read more
@@ -106,16 +99,15 @@ const News = () => {
           </Col>
         </Row>
       </Container>
-      
-      {/* pull out this component ? */}
 
+      {/* pull out this component ? */}
       <Container>
         <Row>
           {data &&
             data.allGhostPost.edges.map(({ node }) => {
               return (
                 <Col>
-                  <Link to={node.title}>
+                  <Link to={node.url}>
                     <Card key={node.id} style={{ width: "18rem" }}>
                       <Card.Img variant="top" src={node.feature_image} />
                       <Card.Body>

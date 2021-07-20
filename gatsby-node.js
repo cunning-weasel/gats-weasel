@@ -72,21 +72,3 @@
 //   }
 // };
 
-// // costing for website - research:
-// // netlify as a quick preview for site/ staging!!!! -> probably
-// // digitalOcean - sysAdmin stuff we need to do
-// // Starter pack for Ghost at $9 per month -> this goes away !!!!
-// // Digital Ocean -> $5 dollars to host everything -> MOngoDb can also be used there
-// // no need for ghost pricing
-// // One.com is only for DNS for annual -> super low fee
-// // We will do intall on Ubuntu -> then push to digital ocean 
-// // Could write One.com, we need Node.js, MondoDb client -> need to serve React based apps
-// // could do email via https://protonmail.com/ -> write to 
-// // Mindchase123
-// // 1MindChase
-// // https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-20-04
-// // Downgrade One.com to lowest package!
-
-// // notes to self:
-// // get gatsby build onto digitalocean
-// // also get git working with digial ocean
