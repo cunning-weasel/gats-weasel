@@ -1,39 +1,29 @@
 import React from "react";
-import { socialicons, icon } from "./Footer.module.scss";
+import { socialicons, icon, backgroundImage } from "./Footer.module.scss";
 import "./Footer.module.scss";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faInstagram } from "@fortawesome/free-regular-svg-icons";
 import Form from "react-bootstrap/Form";
-import Jumbotron from "react-bootstrap/Jumbotron";
 
 const Footer = () => {
   return (
-    <Jumbotron fluid className="footer-bg-image">
-      <StaticImage
-        src="../../images/background/footer_background.png"
-        alt=""
-        style={{
-          width: "100%",
-          height: "100%",
-        }}
-      />
-
-      <>
+    <>
+      <div className={backgroundImage}>
         <div className="row">
-          <div className="col">
+          <div className="col-sm-2" layout="fixed justify-content-left text-center">
             <Link className="footer-logo" to="/">
               <StaticImage
                 src="../images/logos/mindchase_logo_komplett_transparent.png"
                 alt="later"
                 layout="fixed"
-                width={200}
-                height={200}
+                width={250}
+                height={250}
               />
             </Link>
           </div>
-          <div className="col">
+          <div className="col-sm-7" layout="fixed justify-content-center text-center">
             <Form className="text-align:center d-flex justify-content-center">
               <Form.Group className="mt-5 mb-5" controlId="formBasicEmail">
                 <h3 className="mb-2 text-center text-#FF1616 mb-3">
@@ -55,8 +45,8 @@ const Footer = () => {
             </Form>
           </div>
           <div
-            className="col"
-            layout="fixed justify-content-center text-center"
+            className="col-sm-3"
+            layout="fixed justify-content-left text-center"
           >
             <>
               <div className={socialicons}>
@@ -80,7 +70,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="row">
-          <div className="col">
+          <div className="col-sm-6" layout="d-flex justify-content-center">
             <p>
               Site developed by The Vikings Team &copy;{" "}
               {new Date().getFullYear().toString()} mindchase. All Rights
@@ -88,8 +78,8 @@ const Footer = () => {
             </p>
           </div>
         </div>
-      </>
-    </Jumbotron>
+      </div>
+    </>
   );
 };
 export default Footer;
