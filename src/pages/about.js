@@ -121,5 +121,5 @@ const AboutPage = () => {
     </Layout>
   );
 };
-
+console.log(hover4);
 export default AboutPage;
