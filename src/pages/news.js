@@ -2,6 +2,7 @@ import * as React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Seo from "../components/seo";
+import NewsHeader from "../components/newsBody/NewsHeader";
 import { StaticImage } from "gatsby-plugin-image";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
@@ -11,12 +12,6 @@ import Container from "react-bootstrap/Container";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/Dropdown";
 import Card from "react-bootstrap/Card";
-
-{
-  /* <article
-dangerouslySetInnerHTML={{ __html: node.tags.slug }}
-/> */
-}
 
 const News = () => {
   const data = useStaticQuery(
@@ -29,8 +24,9 @@ const News = () => {
               title
               feature_image
               html
-              published_at
+              published_at(formatString: "MMMM D, YYYY")
               excerpt
+              slug
               tags {
                 id
                 name
@@ -49,40 +45,17 @@ const News = () => {
   );
 
   // console.log(data.allGhostPost.edges.node);
-  
+
   return (
     <Layout>
       <Seo title="News" />
 
-      {/* hero/ header - loop through for featured tags */}
+      {/* header */}
       <Container fluid className="p-5 mb-4 bg-light border-bottom">
-        <Row fluid className="py-5">
-          <Col xs={12} md={6}>
-            <Image
-              src={data.allGhostPost.edges[0].node.feature_image}
-              fluid
-              alt=""
-            />
-          </Col>
-          <Col xs={12} md={6}>
-            <Button variant="outline-dark" size="sm">
-              {data.allGhostPost.edges[1].node.tags[0].name}
-            </Button>
-            <h1 className="display-5 fw-bold">
-              {data.allGhostPost.edges[0].node.title}
-            </h1>
-            <p>
-              by {data.allGhostPost.edges[0].node.authors[0].name} on{" "}
-              {data.allGhostPost.edges[0].node.published_at}
-            </p>
-            <Button variant="danger" className="text-uppercase">
-              read more
-            </Button>
-          </Col>
-        </Row>
+        <NewsHeader />
       </Container>
 
-      {/* search/ filter/ dropdowns for tags - good to go */}
+      {/* search/ filter/ dropdowns for tags - add filter options */}
       <Container>
         <Row>
           <Col>
@@ -107,14 +80,14 @@ const News = () => {
             data.allGhostPost.edges.map(({ node }) => {
               return (
                 <Col>
-                  <Link to={node.url}>
+                  <Link to={node.slug}>
                     <Card key={node.id} style={{ width: "18rem" }}>
                       <Card.Img variant="top" src={node.feature_image} />
                       <Card.Body>
                         <Card.Title>{node.title}</Card.Title>
                         {node.excerpt}
                         <Button variant="danger" className="text-uppercase">
-                          read more
+                          <Link to={`/news/${node.slug}`}>read more</Link>
                         </Button>
                       </Card.Body>
                     </Card>

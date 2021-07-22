@@ -11,7 +11,6 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      {/* <StaticImage src="../../images/background/website_with_logo.jpg" alt="logo" /> */}
       <Seo />
       {/* <PopUp /> */}
       <Body />

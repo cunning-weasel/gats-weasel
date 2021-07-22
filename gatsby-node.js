@@ -1,74 +1,47 @@
-// const path = require("path");
-// const { createFilePath } = require("gatsby-source-filesystem");
+// note posts here refers to news items
+const path = require("path");
 
-// // pagination
-// // 100 items total, 10 items per page -> 10 limits
-// // how does ghost do pagination -> limit they give cursor
-// // res => that limit plus link 
-// // can load / design on the frontend - fake pagination - only frontend
+// add the html here so it can be passed thru context
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions;
+  const result = await graphql(`
+    {
+      allGhostPost {
+        edges {
+          node {
+            title
+            slug
+          }
+        }
+      }
+    }
+  `);
 
-// exports.createPages = async ({ graphql, actions, reporter }) => {
-//   // console.log(data.allGhostPost.edges.node);
+  // Check for any errors
+  if (result.errors) {
+    throw new Error(result.errors);
+  }
 
-//   const { createPage } = actions;
+  // Extract query results
+  const posts = result.data.allGhostPost.edges;
 
-//   const res = await graphql(
-//     `
-//       {
-//         allGhostPost(sort: { order: DESC, fields: published_at }, limit: 3) {
-//           edges {
-//             node {
-//               title
-//               id
-//               slug
-//               tags {
-//                 id
-//                 name
-//                 slug
-//               }
-//             }
-//           }
-//         }
-//       }
-//     `
-//   );
+  // Load templates
+  const postTemplate = path.resolve(`./src/templates/NewsItem.js`);
 
-//   if (res.errors) {
-//     reporter.panicOnBuild(`☠️🛑 err while running GQL query 🦦 !! 🛑☠️`);
-//     return;
-//   }
-
-//   console.log(res.allGhostPost.edges.node);
-//   const posts = res.allGhostPost.edges;
-//   // creating blog post list page
-//   const postsPerPage = 2;
-//   const numPages = Math.ceil(posts.length / postsPerPage);
-
-//   // using news page as template
-//   Array.from({ length: numPages }).forEach((_, i) => {
-//     createPage({
-//       path: i === 0 ? `/news` : `/news/${i + 1}`,
-//       component: path.resolve("./src/templates/allPosts.js"),
-//       // pass data to pages with context - access via pageContext on React props
-//       context: {
-//         limit: postsPerPage,
-//         skip: i * postsPerPage,
-//         numPages,
-//         currentPage: i + 1,
-//       },
-//     });
-//   });
-// };
-
-// exports.onCreateNode = ({ node, actions, getNode }) => {
-//   const { createNodeField } = actions;
-//   if (node.internal.type === `allGhostPost`) {
-//     const val = createFilePath({ node, getNode });
-//     createNodeField({
-//       name: `slug`,
-//       node,
-//       val,
-//     });
-//   }
-// };
-
+  // Create post pages
+  posts.forEach(({ node }) => {
+    // This part here defines, that our posts will use
+    // a `/:slug/` permalink.
+    node.url = `/news/${node.slug}/`;
+    console.log("file node.js", node.url);
+    createPage({
+      path: node.url,
+      component: postTemplate,
+      context: {
+        // Data passed to context is available
+        // in page queries as GraphQL variables.
+        slug: node.slug,
+      },
+    });
+  });
+};

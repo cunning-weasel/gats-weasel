@@ -12,7 +12,7 @@ const News = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        allGhostPost(limit: 3 sort: { order: DESC, fields: [published_at] }) {
+        allGhostPost(limit: 3, sort: { order: DESC, fields: [published_at] }) {
           edges {
             node {
               id
@@ -24,7 +24,7 @@ const News = () => {
       }
     `
   );
-  
+
   // note to self - use filter in GQL query for latest 3 posts - sort news section first
   return (
     <>
@@ -40,8 +40,6 @@ const News = () => {
                   <Link to="/news">
                     <Card key={node.id} style={{ width: "18rem" }}>
                       <Card.Img variant="top" src={node.feature_image} />
-                      {/* <GatsbyImage src={node.feature_image} alt="" /> */}
-                      {/* <StaticImage src={node.feature_image} alt="" /> */}
                       <Card.Body>
                         <Card.Title>{node.title}</Card.Title>
                         <Button variant="danger" className="text-uppercase">
