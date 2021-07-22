@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 import "./Nav.module.scss";
 import { StaticImage } from "gatsby-plugin-image";
 import { useState, useEffect } from "react"
-import { color } from "./Nav.module.scss"
+//import { color } from "./Nav.module.scss"
 
 const Nav = () => {
 
@@ -24,7 +24,7 @@ const Nav = () => {
    if(window.scrollY < 73){
      setColor("navbar-light")
    }else if(window.scrollY > 70){
-     setColor("bg-info navbar-light")
+     setColor("bg-light navbar-light")
    }
   }
 
@@ -36,7 +36,7 @@ const Nav = () => {
   console.log("color", color)
 
   return (
-    <div className={`${color} fixed-top`}>
+    <div className={`${color} `}>
       <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
