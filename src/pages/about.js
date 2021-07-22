@@ -118,5 +118,5 @@ const AboutPage = () => {
     </>
   );
 };
-
+console.log(hover4);
 export default AboutPage;
