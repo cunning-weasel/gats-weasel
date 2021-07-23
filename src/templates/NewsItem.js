@@ -24,6 +24,8 @@ const NewsItem = (context) => {
   // pageContext gives me the slug I need
   console.log("______context:", context);
   console.log("pageContext slug:", context.pageContext.slug);
+  console.log("pageContext slug:", context.pageContext.html);
+
   // then  pull in author data (if needed, add to news page), post-tag,
   // and some other cta ?
 
@@ -35,7 +37,7 @@ const NewsItem = (context) => {
         <p>by author on date? + link to author?</p>
         <img src={context.pageContext.feature_image} />
         <div
-          dangerouslySetInnerHTML={{ __html: NewsItemData.ghostPost.html }}
+          dangerouslySetInnerHTML={{ __html: context.pageContext.html }}
         />
       </Container>
     </Layout>

@@ -11,6 +11,8 @@ exports.createPages = async ({ graphql, actions }) => {
           node {
             title
             slug
+            html
+            feature_image
           }
         }
       }
@@ -24,7 +26,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   // Extract query results
   const posts = result.data.allGhostPost.edges;
-
+  
   // Load templates
   const postTemplate = path.resolve(`./src/templates/NewsItem.js`);
 
@@ -33,7 +35,7 @@ exports.createPages = async ({ graphql, actions }) => {
     // This part here defines, that our posts will use
     // a `/:slug/` permalink.
     node.url = `/news/${node.slug}/`;
-    console.log("file node.js", node.url);
+    // console.log("file node.js", node.url);
     createPage({
       path: node.url,
       component: postTemplate,
@@ -41,6 +43,8 @@ exports.createPages = async ({ graphql, actions }) => {
         // Data passed to context is available
         // in page queries as GraphQL variables.
         slug: node.slug,
+        html: node.html,
+        feature_image: node.feature_image
       },
     });
   });
