@@ -74,7 +74,7 @@ const AboutPage = () => {
           </div>
 
           <div className={hoverMe}>
-            <div className="row">
+            <div className="colum">
               <div className="col-sm-4 col-lg-6">
                 <div className="card" style={{ width: "26rem" }}>
                   <StaticImage
