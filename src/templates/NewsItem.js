@@ -4,6 +4,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
 import Seo from "../components/seo";
 import Container from "react-bootstrap/Container";
+import Image from 'react-bootstrap/Image'
 
 const NewsItem = (context) => {
   // pull in title, img + img metadata, then full html
@@ -21,21 +22,15 @@ const NewsItem = (context) => {
     `
   );
 
-  // pageContext gives me the slug I need
-  console.log("______context:", context);
-  console.log("pageContext slug:", context.pageContext.slug);
-  console.log("pageContext slug:", context.pageContext.html);
-
-  // then  pull in author data (if needed, add to news page), post-tag,
-  // and some other cta ?
-
+  // access context via pageContext
+  
   return (
     <Layout>
       <Seo title={context.pageContext.slug} />
-      <Container>
+      <Container fluid>
         <h1>{context.pageContext.slug}</h1>
-        <p>by author on date? + link to author?</p>
-        <img src={context.pageContext.feature_image} />
+        <p>by -Link- author -Link- on date?</p>
+        <Image src={context.pageContext.feature_image} />
         <div
           dangerouslySetInnerHTML={{ __html: context.pageContext.html }}
         />
