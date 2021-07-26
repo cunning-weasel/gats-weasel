@@ -18,7 +18,7 @@ const Workshops = () => {
               />
           </Col>
           <Col>
-          <h2 className="display-6 w-bold lh-1 underline">Delivering Knowledge To All</h2>
+          <h2 className="display-6 w-bold lh-1 underline">Grow with us</h2>
             <p>
               Mindchase is a Team of 5 ambitious, young people, full of ideas,
               inspirations and a common goal: to create a place for personal and
@@ -37,9 +37,9 @@ const Workshops = () => {
               When we're not spending a digital workday together, we're still
               constantly exchanging new ideas and suggestions via social media.
             </p>
-            <Link to="/workshops" className="btn btn-danger text-uppercase">
-              our workshops
-            </Link>
+            <Link to="/about" className="btn btn-danger text-uppercase">
+                check out our team
+              </Link>
           </Col>
         </Row>
       </Container>

@@ -21,7 +21,9 @@ const WhatWeDo = () => {
             </Col>
             <Col>
               <div className="underline">
-                <h2 className="display-6 w-bold">Empower, Knowledge, Growth, Education and Training</h2>
+                <h2 className="display-6 w-bold">
+                  Empower, Knowledge, Growth, Education and Training
+                </h2>
               </div>
               <div>
                 <ul className={listSplit}>
@@ -33,8 +35,8 @@ const WhatWeDo = () => {
                   <li>Stress-Management</li>
                 </ul>
               </div>
-              <Link to="/about" className="btn btn-danger text-uppercase">
-                check out our team
+              <Link to="/workshops" className="btn btn-danger text-uppercase">
+                our workshops
               </Link>
             </Col>
           </Row>
