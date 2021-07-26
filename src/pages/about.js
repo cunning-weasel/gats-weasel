@@ -3,26 +3,26 @@ import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
 import Seo from "../components/seo";
 import Button from "react-bootstrap/Button";
-//import h5 class={ card-title } from "react-bootstrap/Card";
-import { overlay, hoverMe, text, doven } from "./about.module.scss";
-
+import { overlay, hoverMe, text} from "./about.module.scss";
+//import "/about.module.scss"
 const AboutPage = () => {
   return (
     <>
       <Layout>
         <Seo title="About" />
         {/* class container */}
-        <div className={doven}>
-          <div className={hoverMe}>
-            <div className="row">
-              <div className="col-sm-6 col-lg-4">
+        <div className="container-md">
+          <div className="row">
+            <div className="col-sm col-lg-4">
+              <div className={hoverMe}>
                 <div className="card" style={{ width: "26rem" }}>
                   <StaticImage
                     alt="Marco, the only man on a team"
                     src="../images/team/Marco/marco.jpg"
+                    className="rounded-circle"
                     layout="fixed"
                     width={410}
-                    height={300}
+                    height={400}
                   />
 
                   <div className="card-body">
@@ -33,12 +33,14 @@ const AboutPage = () => {
                 </div>
               </div>
             </div>
-            <div className={hoverMe}>
-              <div className="col-sm-6 col-lg-4">
+
+            <div className="col-sm col-lg-4">
+              <div className={hoverMe}>
                 <div className="card" style={{ width: "26rem" }}>
                   <StaticImage
                     alt="Karo, CEO of mindchase"
                     src="../images/team/Karo/karo.JPG"
+                    className="rounded-circle"
                     layout="fixed"
                     width={410}
                     height={400}
@@ -52,12 +54,14 @@ const AboutPage = () => {
                 </div>
               </div>
             </div>
-            <div className={hoverMe}>
-              <div className="col-sm-6 col-lg-4">
+
+            <div className="col-sm col-lg-4">
+              <div className={hoverMe}>
                 <div className="card" style={{ width: "26rem" }}>
                   <StaticImage
                     alt="Phyllis"
                     src="../images/team/Phyllis/phyllis.JPG"
+                    className="rounded-circle"
                     layout="fixed"
                     width={410}
                     height={400}
@@ -73,13 +77,14 @@ const AboutPage = () => {
             </div>
           </div>
 
-          <div className={hoverMe}>
-            <div className="row">
-              <div className="col-sm-4 col-lg-6">
+          <div className="row">
+            <div className="col-sm col-lg-6">
+              <div className={hoverMe}>
                 <div className="card" style={{ width: "26rem" }}>
                   <StaticImage
                     alt="Kathleen"
                     src="../images/team/Kathleen/kathleen.JPEG"
+                    className="rounded-circle"
                     layout="fixed"
                     width={400}
                     height={300}
@@ -91,16 +96,18 @@ const AboutPage = () => {
                   </div>
                 </div>
               </div>
-            
-            <div className={hoverMe}>
-              <div className="col-sm-4 col-lg-6">
+            </div>
+
+            <div className="col-sm col-lg-6">
+              <div className={hoverMe}>
                 <div className="card" style={{ width: "26rem" }}>
                   <StaticImage
                     alt="Franzi, second CEO of mindchase"
                     src="../images/team/Franzi/franzi.jpg"
+                    className="rounded-circle"
                     layout="fixed"
-                    width={400}
-                    height={300}
+                    width={410}
+                    height={400}
                   />
 
                   <div className="card-body">
@@ -110,7 +117,6 @@ const AboutPage = () => {
                   </div>
                 </div>
               </div>
-            </div>
             </div>
           </div>
         </div>

@@ -3,16 +3,15 @@ import { useStaticQuery, graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Seo from "../components/seo";
 import NewsHeader from "../components/newsBody/NewsHeader";
-import { StaticImage } from "gatsby-plugin-image";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import Image from "react-bootstrap/Image";
 import Container from "react-bootstrap/Container";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/Dropdown";
 import Card from "react-bootstrap/Card";
 
+// moved out for testing
 const News = () => {
   const data = useStaticQuery(
     graphql`

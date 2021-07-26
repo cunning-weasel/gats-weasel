@@ -4,6 +4,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { Link } from "gatsby";
 import"../Body.module.scss";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Workshops = () => {
   return (
@@ -11,9 +12,13 @@ const Workshops = () => {
       <Container>
         <Row>
           <Col>
-            <h2 className="display-6 w-bold lh-1 underline">Delivering Knowledge To All</h2>
+          <StaticImage
+                src="../../images/team/mindchase_team.jpg"
+                alt="Collage with photos of the mindchase team with text saying: this is us. From left Franzi, Marco, Karo, Phyllis, Kathleen."
+              />
           </Col>
           <Col>
+          <h2 className="display-6 w-bold lh-1 underline">Delivering Knowledge To All</h2>
             <p>
               Mindchase is a Team of 5 ambitious, young people, full of ideas,
               inspirations and a common goal: to create a place for personal and

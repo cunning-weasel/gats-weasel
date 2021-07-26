@@ -4,7 +4,7 @@ import Banner from "../components/Banner";
 import Header from "../components/indexBody/Header";
 import Workshops from "../components/indexBody/Workshops";
 import WhatWeDo from "../components/indexBody/WhatWeDo";
-import News from "../components/indexBody/News";
+// import News from "../components/indexBody/News";
 
 const Body = () => {
   return (
@@ -13,7 +13,7 @@ const Body = () => {
       <Workshops />
       <WhatWeDo />
       <Banner />
-      <News />
+      {/* <News /> */}
     </>
   );
 };
