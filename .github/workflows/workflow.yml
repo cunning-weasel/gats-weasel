@@ -1,0 +1,30 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - newsPull
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+      - uses: actions/checkout@master
+      - name: Deploy
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          ssh-keyscan $SERVER_IP >> ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/known_hosts
+          touch ssh_key
+          (echo "$SSH_PRIVATE_KEY") > ssh_key
+          chmod 600 ssh_key
+          npm install
+          npm run build
+          scp -r -i ssh_key ./public/* weasel@$SERVER_IP:/var/www/mindchase/landing-main
+    env:
+      SSH_PRIVATE_KEY: ${{secrets.SSH_KEY}}
+      SERVER_IP: ${{secrets.SERVER_IP}}
+      GATSBY_CONTENT_API: ${{secrets.GATSBY_CONTENT_API}}
+      CI: false

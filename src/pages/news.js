@@ -13,6 +13,7 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/Dropdown";
 import Card from "react-bootstrap/Card";
 
+// moved out for testing
 const News = () => {
   const data = useStaticQuery(
     graphql`
