@@ -33,8 +33,6 @@
       "gatsby-plugin-sass": "^4.7.1",
       "gatsby-plugin-sharp": "^3.10.0",
       "gatsby-source-filesystem": "^3.7.1",
-      "gatsby-source-ghost": "^4.2.4",
-      "gatsby-source-github-api": "^1.0.0",
       "gatsby-transformer-sharp": "^3.10.0",
       "gbimage-bridge": "^0.1.4",
       "node-sass": "^6.0.0",
