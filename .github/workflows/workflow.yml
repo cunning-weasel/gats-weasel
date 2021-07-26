@@ -26,4 +26,5 @@ jobs:
     env:
       SSH_PRIVATE_KEY: ${{secrets.SSH_KEY}}
       SERVER_IP: ${{secrets.SERVER_IP}}
+      GATSBY_CONTENT_API: ${{secrets.GATSBY_CONTENT_API}}
       CI: false
