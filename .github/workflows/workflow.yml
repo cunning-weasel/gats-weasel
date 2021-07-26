@@ -2,15 +2,15 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - newsPull
+      - main
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: [14.x]
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@main
       - name: Deploy
         run: |
           mkdir -p ~/.ssh
