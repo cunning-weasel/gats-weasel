@@ -12,7 +12,6 @@ const NewsItem = (context) => {
     graphql`
       query NewsItem($slug: String) {
         ghostPost(slug: { eq: $slug }) {
-          ghostId
           title
           slug
           html
