@@ -6,7 +6,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
   const result = await graphql(`
     {
-      allGhostPost {
+      allGhostPost(sort: { order: ASC, fields: published_at }) {
         edges {
           node {
             title

@@ -50,9 +50,8 @@ const News = () => {
       <Seo title="News" />
 
       {/* header */}
-      <Container fluid className="p-5 mb-4 bg-light border-bottom">
-        <NewsHeader />
-      </Container>
+
+      <NewsHeader />
 
       {/* search/ filter/ dropdowns for tags - add filter options */}
       <Container>
@@ -78,20 +77,17 @@ const News = () => {
           {data &&
             data.allGhostPost.edges.map(({ node }) => {
               return (
-                <Col>
-                  <Link to={node.slug}>
+                <Link to={`/news/${node.slug}`}>
+                  <Col>
                     <Card key={node.id} style={{ width: "18rem" }}>
                       <Card.Img variant="top" src={node.feature_image} />
                       <Card.Body>
                         <Card.Title>{node.title}</Card.Title>
                         {node.excerpt}
-                        <Button variant="danger" className="text-uppercase">
-                          <Link to={`/news/${node.slug}`}>read more</Link>
-                        </Button>
                       </Card.Body>
                     </Card>
-                  </Link>
-                </Col>
+                  </Col>
+                </Link>
               );
             })}
         </Row>
