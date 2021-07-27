@@ -63,7 +63,8 @@ const Nav = () => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent" a class="nav-link" href="#" style="color:#1a3457">
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          {/* a class="nav-link" href="#" style="color:#1a3457" */}
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="navItem">
                 <Link className="nav-link" to="/about">
