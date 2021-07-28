@@ -2,8 +2,8 @@ import * as React from "react";
 import { navbarLight, navbarNav, navLink } from "./Nav.module.scss";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
-import { useState, useEffect } from "react";
-//import { color } from "./Nav.module.scss";
+import { useState } from "react";
+
 
 
 const Nav = () => {
@@ -18,22 +18,6 @@ const Nav = () => {
     }
     setShowMobile(!showMobile);
   };
-
-  // const [color, setColor]= useState("navbar")
-  // const scrollFunc = (e) => {
-  //  if(window.scrollY < 73){
-  //    setColor("navbar-light")
-  //  }else if(window.scrollY > 70){
-  //    setColor("bg-light navbar-light")
-  //  }
-  // }
-
-  // useEffect(() =>{
-  //   window.addEventListener("scroll", scrollFunc) 
-  //  return ()=> window.removeEventListener("scroll", scrollFunc)
-  // },[])
-
-  // console.log("color", color)
 
   return (
     <div className={navbarLight}>
@@ -72,24 +56,24 @@ const Nav = () => {
                 </Link>
               </li>
               <li className="navItem">
-                <Link className="nav-link" to="/workshops">
+                <Link className={`nav-link ${navLink}`} to="/workshops">
                   Workshops
                 </Link>
               </li>
               <li className="navItem">
                 <li>
-                  <a href="https://campus.mindchase.de" className="nav-link">
+                  <a href="https://campus.mindchase.de" className={`nav-link ${navLink}`}>
                     Digital Campus
                   </a>
                 </li>
               </li>
               <li className="navItem">
-                <Link className="nav-link" to="/news">
+                <Link className={`nav-link ${navLink}`} to="/news">
                   News
                 </Link>
               </li>
               <li className="navItem">
-                <Link className="nav-link" to="/contact">
+                <Link className={`nav-link ${navLink}`} to="/contact">
                   Contact
                 </Link>
               </li>
