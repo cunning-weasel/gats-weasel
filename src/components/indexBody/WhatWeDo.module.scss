@@ -5,12 +5,12 @@
     height: auto;
   }
   
-  // // // split list-items into 2 columns
-  // .listSplit {
-  //   columns: 2;
-  //   column-width: auto;
-  //   column-count: 2;
-  // }
+  // // split list-items into 2 columns
+  .listSplit {
+    columns: 2;
+    column-width: auto;
+    column-count: 2;
+  }
   
   .pageSectionNews {
     margin-top: 5.5rem;

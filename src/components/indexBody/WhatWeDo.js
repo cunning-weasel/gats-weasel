@@ -12,14 +12,14 @@ const WhatWeDo = () => {
       <section className="page-section-empower">
         <Container className={container}>
           <Row>
-          <Col className="col order-1">
+          <Col className="col-12 col-lg-6">
               <StaticImage
                 src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80"
                 alt=""
                 className={empowerImg}
               />
             </Col>
-            <Col className="col order-2">
+            <Col className="col-12 col-lg-6">
               <div className="underline">
                 <h2 className="display-6 w-bold">
                   Empower, Knowledge, Growth, Education and Training

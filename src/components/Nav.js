@@ -1,10 +1,10 @@
 import * as React from "react";
-//import { Navbar, navItem } from "./Nav.module.scss";
+import { navbarLight, navbarNav, navLink } from "./Nav.module.scss";
 import { Link } from "gatsby";
-import "./Nav.module.scss";
 import { StaticImage } from "gatsby-plugin-image";
-import { useState, useEffect } from "react"
-//import { color } from "./Nav.module.scss"
+import { useState, useEffect } from "react";
+//import { color } from "./Nav.module.scss";
+
 
 const Nav = () => {
 
@@ -19,24 +19,25 @@ const Nav = () => {
     setShowMobile(!showMobile);
   };
 
-  const [color, setColor]= useState("navbar")
-  const scrollFunc = (e) => {
-   if(window.scrollY < 73){
-     setColor("navbar-light")
-   }else if(window.scrollY > 70){
-     setColor("bg-light navbar-light")
-   }
-  }
+  // const [color, setColor]= useState("navbar")
+  // const scrollFunc = (e) => {
+  //  if(window.scrollY < 73){
+  //    setColor("navbar-light")
+  //  }else if(window.scrollY > 70){
+  //    setColor("bg-light navbar-light")
+  //  }
+  // }
 
-  useEffect(() =>{
-    window.addEventListener("scroll", scrollFunc) 
-   return ()=> window.removeEventListener("scroll", scrollFunc)
-  },[])
+  // useEffect(() =>{
+  //   window.addEventListener("scroll", scrollFunc) 
+  //  return ()=> window.removeEventListener("scroll", scrollFunc)
+  // },[])
 
-  console.log("color", color)
+  // console.log("color", color)
 
   return (
-    <div className={`${color} `}>
+    <div className={navbarLight}>
+    <div className="navbar-light">
       <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
@@ -64,10 +65,9 @@ const Nav = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          {/* a class="nav-link" href="#" style="color:#1a3457" */}
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul className={`navbar-nav me-auto mb-2 mb-lg-0 ${navbarNav}`}>
               <li className="navItem">
-                <Link className="nav-link" to="/about">
+                <Link className={`nav-link ${navLink}`} to="/about">
                   About
                 </Link>
               </li>
@@ -139,6 +139,7 @@ const Nav = () => {
           </div>
         </div>
       </nav>
+      </div>
     </div>
   );
 };

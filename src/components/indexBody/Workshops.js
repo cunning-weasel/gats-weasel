@@ -9,17 +9,18 @@ import { container, workshopsImage } from "./WhatWeDo.module.scss";
 
 const Workshops = () => {
   return (
+    <>
     <section className="page-section-workshops">
       <Container className={container}>
         <Row>
-          <Col className="col-sm-6 col-lg-6">
+          <Col className="col-12 col-lg-6">
           <StaticImage
                 src="../../images/team/mindchase_team.jpg"
                 alt="Collage with photos of the mindchase team with text saying: this is us. From left Franzi, Marco, Karo, Phyllis, Kathleen."
                 className={workshopsImage}
               />
           </Col>
-          <Col className="col-sm-6 col-lg-6">
+          <Col className="col-12 col-lg-6">
           <h2 className="display-6 w-bold lh-1 underline">Grow with us</h2>
             <p>
               Mindchase is a Team of 5 ambitious, young people, full of ideas,
@@ -46,6 +47,7 @@ const Workshops = () => {
         </Row>
       </Container>
     </section>
+    </>
   );
 };
 
