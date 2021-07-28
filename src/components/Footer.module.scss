@@ -6,7 +6,7 @@
       width: 300px;
       height: 100px;
       //margin: 500 300px;
-      padding-left: 7rem;
+      padding-left: 5rem;
       text-align: center;
       line-height: 10px;
       font-size: 40px;
@@ -28,9 +28,17 @@
   .background-image {
     background-image: url(../images/background/footer_background.png);
     background-size:cover ;
-    margin-top: auto;  
+    margin-top: 20px;  
   }
 
  .text {
     padding: 10px 10px;
+  }
+
+  .footer-logo {
+    position: relative;
+    display:flexbox;
+    width: 100%;
+    height: 100%;
+
   }
