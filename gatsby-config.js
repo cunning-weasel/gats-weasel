@@ -5,7 +5,7 @@ module.exports = {
     title: "mindchase",
     titleTemplate: "%s · easy growing for everyone",
     description: "Help everyone to grow beyond their limits, to expand their horizon and to find what they are looking to achieve in life.",
-    url: "https://www.mindchase.de",
+    url: "https://cms.mindchase.de/",
     image: "/images/favicon.ico",
   },
   plugins: [

@@ -87,7 +87,7 @@ const AboutPage = () => {
                     className="rounded-circle"
                     layout="fixed"
                     width={400}
-                    height={300}
+                    height={410}
                   />
                   <div className="card-body">
                     <div className={overlay}>
