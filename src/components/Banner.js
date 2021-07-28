@@ -1,22 +1,24 @@
 import * as React from "react";
-import "./Banner.module.scss";
+import { title, DCI, basem } from "./Banner.module.scss";
 import { StaticImage } from "gatsby-plugin-image";
 
 //import { Link } from "gatsby";
 
 export default function Banner() {
   return (
+   
     <div className="container-md">
+       <div className={basem}>
       <div className="row">
         <div className="col-sm col-lg-4">
-          <h3 className="title">Our Partners</h3>
+          <h3 className={title}>Our Partners</h3>
 
           <a
             href="https://digitalcareerinstitute.org/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <StaticImage
+            <StaticImage className={DCI}
               src="../images/logos/partners/dci-logo-blue.png"
               alt="DCI it is a shortcut for Digital Career Institute, logo is in blue color."
               layout="fixed"
@@ -29,6 +31,7 @@ export default function Banner() {
         <p>---place for your logo---</p>
       </div> */}
       </div>
+    </div>
     </div>
   );
 }

@@ -1,11 +1,18 @@
-.containerBanner {
-    background-color: grey;
-    width: 50%;
-    color: rgb(104, 84, 77);
-  }
-  .title {
-    display: flex;
-    justify-content: center;
-    font-size: 3em;
-    font-family: Arial, Helvetica, sans-serif;
-  }
+.title {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  font-size: 2em;
+  font-family: Arial, Helvetica, sans-serif;
+ 
+}
+
+.DCI:hover {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px red;
+}
+.basem{
+  margin: 20px 20px 20px; 
+  background-color: whitesmoke
+}
