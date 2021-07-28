@@ -3,8 +3,6 @@ import { socialicons, icon, backgroundImage } from "./Footer.module.scss";
 import "./Footer.module.scss";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faInstagram } from "@fortawesome/free-regular-svg-icons";
 import Form from "react-bootstrap/Form";
 
 const Footer = () => {
@@ -16,7 +14,7 @@ const Footer = () => {
             <Link className="footer-logo" to="/">
               <StaticImage
                 src="../images/logos/mindchase_logo_komplett_transparent.png"
-                alt="later"
+                alt="Mindchase logo. Red text, background transparent."
                 layout="fixed"
                 width={250}
                 height={250}
@@ -72,9 +70,9 @@ const Footer = () => {
         <div className="row">
           <div className="col-sm-6" layout="d-flex justify-content-center">
             <p>
-              Site developed by The Vikings Team &copy;{" "}
+              &copy;{" "}
               {new Date().getFullYear().toString()} mindchase. All Rights
-              Reserved.
+              Reserved. <br></br> Site developed by Team Vikings  
             </p>
           </div>
         </div>

@@ -1,17 +1,26 @@
 // empowerImg resize
-.empowerImg {
+.empowerImg .workshopsImage {
     max-width: 100%;
+    display: flexbox;
     height: auto;
   }
   
-  // split list-items into 2 columns
-  .listSplit {
-    columns: 2;
-    column-width: auto;
-    column-count: 2;
-  }
+  // // // split list-items into 2 columns
+  // .listSplit {
+  //   columns: 2;
+  //   column-width: auto;
+  //   column-count: 2;
+  // }
   
   .pageSectionNews {
     margin-top: 5.5rem;
     margin-bottom: 5.5rem;
   }  
+
+  .container {
+    display: flexbox;
+    position: relative;
+    margin: 35px 25px;
+    padding: 15px 10px;
+    grid-template-columns: 1fr;
+  }
