@@ -6,10 +6,11 @@ import { StaticImage } from "gatsby-plugin-image";
 
 export default function Banner() {
   return (
-    <div className="containerBanner">
-      <h3 className="title">Our Partners</h3>
+    <div className="container-md">
       <div className="row">
-        <div className="col">
+        <div className="col-sm col-lg-4">
+          <h3 className="title">Our Partners</h3>
+
           <a
             href="https://digitalcareerinstitute.org/"
             target="_blank"
