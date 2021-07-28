@@ -1,5 +1,5 @@
 import React from "react";
-import { socialicons, icon, backgroundImage } from "./Footer.module.scss";
+import { socialicons, icon, backgroundImage, text } from "./Footer.module.scss";
 import "./Footer.module.scss";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
@@ -8,9 +8,10 @@ import Form from "react-bootstrap/Form";
 const Footer = () => {
   return (
     <>
+    <div className="container-fluid">
       <div className={backgroundImage}>
         <div className="row">
-          <div className="col-sm-2" layout="fixed justify-content-left text-center">
+          <div className="col-12 col-lg-2" layout="fixed justify-content-center text-center">
             <Link className="footer-logo" to="/">
               <StaticImage
                 src="../images/logos/mindchase_logo_komplett_transparent.png"
@@ -21,7 +22,7 @@ const Footer = () => {
               />
             </Link>
           </div>
-          <div className="col-sm-7" layout="fixed justify-content-center text-center">
+          <div className="col-12 col-lg-8" layout="fixed justify-content-center text-center">
             <Form className="text-align:center d-flex justify-content-center">
               <Form.Group className="mt-5 mb-5" controlId="formBasicEmail">
                 <h3 className="mb-2 text-center text-#FF1616 mb-3">
@@ -43,8 +44,8 @@ const Footer = () => {
             </Form>
           </div>
           <div
-            className="col-sm-3"
-            layout="fixed justify-content-left text-center"
+            className="col-12 col-lg-2"
+            layout="fixed justify-content-center text-center"
           >
             <>
               <div className={socialicons}>
@@ -68,8 +69,8 @@ const Footer = () => {
           </div>
         </div>
         <div className="row">
-          <div className="col-sm-6" layout="d-flex justify-content-center">
-            <p>
+          <div className="col-12 col-lg-6" layout="d-flex justify-content-center">
+            <p className={text}>
               &copy;{" "}
               {new Date().getFullYear().toString()} mindchase. All Rights
               Reserved. <br></br> Site developed by Team Vikings  
@@ -77,7 +78,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
+    </div>
     </>
   );
 };
+
 export default Footer;

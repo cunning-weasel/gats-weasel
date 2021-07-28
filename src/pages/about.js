@@ -2,13 +2,15 @@ import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
 import Seo from "../components/seo";
-import Button from "react-bootstrap/Button";
+import { Link } from "gatsby";
 import {
   overlay,
   hoverMe,
   text,
   roundedCircle,
   cardBackground,
+  card,
+  campusButton,
 } from "./about.module.scss";
 
 const AboutPage = () => {
@@ -19,19 +21,19 @@ const AboutPage = () => {
 
         <div className="container">
           <div className="row ">
-            <div className="col-sm-4 col-lg-4">
+            <div className="col-12 col-lg-4">
               <div className={hoverMe}>
-                <div className="card">
+                <div className={`card ${card}`} >
                   <div className={cardBackground}>
                     <StaticImage
-                      src="../images/team/Karo/karo_2.JPG"
+                      src="../images/team/Karo/karo-2.JPG"
                       alt="Karo, CEO of mindchase"
                       className={roundedCircle}
                     />
                     <div className="card-body">
                       <div className={overlay}>
                         <h5 className={text}>
-                          “Hi, my name is Karo and I am most motivated by team
+                          “Hi, my name is <b>Karo</b> and I am most motivated by team
                           spirit and office dogs.”
                         </h5>
                       </div>
@@ -41,9 +43,9 @@ const AboutPage = () => {
               </div>
             </div>
 
-            <div className="col-sm-4 col-lg-4">
+            <div className="col-12 col-lg-4">
               <div className={hoverMe}>
-                <div className="card">
+                <div className={`card ${card}`} >
                   <div className={cardBackground}>
                     <StaticImage
                       src="../images/team/Marco/marco.jpg"
@@ -53,7 +55,7 @@ const AboutPage = () => {
                     <div className="card-body">
                       <div className={overlay}>
                         <h5 className={text}>
-                          “Hi, I am Marco and I enjoy inspiring by simplicity as
+                          “Hi, I am <b>Marco</b> and I enjoy inspiring by simplicity as
                           well as sportive competitions with myself.”
                         </h5>
                       </div>
@@ -63,19 +65,19 @@ const AboutPage = () => {
               </div>
             </div>
 
-            <div className="col-sm-4 col-lg-4">
+            <div className="col-12 col-lg-4">
               <div className={hoverMe}>
-                <div className="card">
+                <div className={`card ${card}`} >
                   <div className={cardBackground}>
                     <StaticImage
-                      src="../images/team/Phyllis/phyllis_1.JPG"
+                      src="../images/team/Phyllis/phyllis-1.JPG"
                       alt="Phyllis"
                       className={roundedCircle}
                     />
                     <div className="card-body">
                       <div className={overlay}>
                         <h5 className={text}>
-                          “Hey, my name is Phyllis and I am enthusiastic about
+                          “Hey, my name is <b>Phyllis</b> and I am enthusiastic about
                           self-development and traveling to unusual places.”
                         </h5>
                       </div>
@@ -87,31 +89,31 @@ const AboutPage = () => {
           </div>
 
           <div className="row justify-content-md-center">
-            <div className="col-sm-4 col-lg-4">
+            <div className="col-12 col-lg-4">
               <div className={hoverMe}>
-                <div className="card">
+                <div className={`card ${card}`} >
                   <div className={cardBackground}>
                     <StaticImage
                       src="../images/team/Kathleen/kathleen_1.JPEG"
                       alt="Kathleen"
                       className={roundedCircle}
                     />
-                  </div>
-                  <div className="card-body">
-                    <div className={overlay}>
-                      <h5 className={text}>
-                        “Hello, my name is Kathleen and I am  passionate about checking out
+                    <div className="card-body">
+                      <div className={overlay}>
+                        <h5 className={text}>
+                        “Hello, my name is <b>Kathleen</b> and I am  passionate about checking out
                         new tools and I love to cook all day long.”
-                      </h5>
+                        </h5>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="col-sm-4 col-lg-4">
+            <div className="col-12 col-lg-4">
               <div className={hoverMe}>
-                <div className="card">
+                <div className={`card ${card}`} >
                   <div className={cardBackground}>
                     <StaticImage
                       src="../images/team/Franzi/franzi_1.jpg"
@@ -120,8 +122,8 @@ const AboutPage = () => {
                     />
                     <div className="card-body">
                       <div className={overlay}>
-                        <h5 class={text}>
-                          “Hej, I am Franzi an out of box thinker with a
+                        <h5 className={text}>
+                          “Hej, I am <b>Franzi</b> an out of box thinker with a
                           weakness for coffee and post it’s.”
                         </h5>
                       </div>
@@ -132,6 +134,14 @@ const AboutPage = () => {
             </div>
           </div>
         </div>
+        <div className="row justify-content-center"> 
+        <div className="col-12 col-lg-4"  className={campusButton}>
+        <Link to="https://campus.mindchase.de/#/" className="btn btn-danger">
+          Hash, hash... hey You, yes You check out our Digital Campus.
+         </Link>
+         </div>
+         </div>
+       
       </Layout>
     </>
   );
