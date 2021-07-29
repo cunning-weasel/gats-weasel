@@ -2,7 +2,7 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { empowerImg, listSplit } from "./WhatWeDo.module.scss";
+import { empowerImg, listSplit, container } from "./WhatWeDo.module.scss";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -10,16 +10,16 @@ const WhatWeDo = () => {
   return (
     <>
       <section className="page-section-empower">
-        <Container>
+        <Container className={container}>
           <Row>
-            <Col>
+          <Col className="col-12 col-lg-6">
               <StaticImage
                 src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80"
                 alt=""
                 className={empowerImg}
               />
             </Col>
-            <Col>
+            <Col className="col-12 col-lg-6">
               <div className="underline">
                 <h2 className="display-6 w-bold">
                   Empower, Knowledge, Growth, Education and Training
