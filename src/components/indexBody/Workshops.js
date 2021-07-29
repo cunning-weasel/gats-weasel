@@ -5,19 +5,22 @@ import Col from "react-bootstrap/Col";
 import { Link } from "gatsby";
 import"../Body.module.scss";
 import { StaticImage } from "gatsby-plugin-image";
+import { container, workshopsImage } from "./WhatWeDo.module.scss";
 
 const Workshops = () => {
   return (
-    <section className="mt-5 mb-5">
-      <Container>
+    <>
+    <section className="page-section-workshops">
+      <Container className={container}>
         <Row>
-          <Col>
+          <Col className="col-12 col-lg-6">
           <StaticImage
                 src="../../images/team/mindchase_team.jpg"
                 alt="Collage with photos of the mindchase team with text saying: this is us. From left Franzi, Marco, Karo, Phyllis, Kathleen."
+                className={workshopsImage}
               />
           </Col>
-          <Col>
+          <Col className="col-12 col-lg-6">
           <h2 className="display-6 w-bold lh-1 underline">Grow with us</h2>
             <p>
               Mindchase is a Team of 5 ambitious, young people, full of ideas,
@@ -39,11 +42,12 @@ const Workshops = () => {
             </p>
             <Link to="/about" className="btn btn-danger text-uppercase">
                 check out our team
-              </Link>
+            </Link>
           </Col>
         </Row>
       </Container>
     </section>
+    </>
   );
 };
 
