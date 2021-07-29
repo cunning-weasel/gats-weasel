@@ -134,12 +134,16 @@ const AboutPage = () => {
             </div>
           </div>
         </div>
-        <div className="row justify-content-center"> 
-        <div className="col-12 col-lg-4"  className={campusButton}>
+        <div className="row">
+          <div className="col-12 col-lg-6"> <Link to="https://campus.mindchase.de/#/" className="btn btn-danger">
+          Hash, hash... hey You, yes You check out our Digital Campus.
+         </Link></div>
+        <div className="col-12 col-lg-6 text-right" className={campusButton}>
         <Link to="https://campus.mindchase.de/#/" className="btn btn-danger">
           Hash, hash... hey You, yes You check out our Digital Campus.
          </Link>
          </div>
+         
          </div>
        
       </Layout>
