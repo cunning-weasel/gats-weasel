@@ -4,9 +4,9 @@ import Layout from "../components/Layout";
 import Seo from "../components/seo";
 import NewsHeader from "../components/newsBody/NewsHeader";
 import Button from "react-bootstrap/Button";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
-import Container from "react-bootstrap/Container";
+// import Col from "react-bootstrap/Col";
+// import Row from "react-bootstrap/Row";
+// import Container from "react-bootstrap/Container";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/Dropdown";
 import Card from "react-bootstrap/Card";
@@ -54,9 +54,9 @@ const News = () => {
       <NewsHeader />
 
       {/* search/ filter/ dropdowns for tags - add filter options */}
-      <Container>
-        <Row>
-          <Col>
+      <div className="container">
+        <div className="row">
+          <div className="col-12 col-lg-4">
             <DropdownButton variant="outline-dark" title="Browse by category">
               <Dropdown.Item href="#/action-1">
                 Presentation-Skills
@@ -67,18 +67,18 @@ const News = () => {
               <Dropdown.Item href="#/action-3">Stress Management</Dropdown.Item>
               <Dropdown.Item href="#/action-3">Self-Confidence</Dropdown.Item>
             </DropdownButton>
-          </Col>
-        </Row>
-      </Container>
+          </div>
+        </div>
+      </div>
 
       {/* pull out this component ? */}
-      <Container>
-        <Row>
+      <div className="container">
+        <div className="row">
           {data &&
             data.allGhostPost.edges.map(({ node }) => {
               return (
-                <Link to={`/news/${node.slug}`}>
-                  <Col>
+                <div className="col-12 col-lg-4">
+                  <Link to={`/news/${node.slug}`}>
                     <Card key={node.id} style={{ width: "18rem" }}>
                       <Card.Img variant="top" src={node.feature_image} />
                       <Card.Body>
@@ -86,12 +86,12 @@ const News = () => {
                         {node.excerpt}
                       </Card.Body>
                     </Card>
-                  </Col>
-                </Link>
+                  </Link>
+                </div>
               );
             })}
-        </Row>
-      </Container>
+        </div>
+      </div>
 
       {/* pagination */}
       {/* {Array.from({ length: numPages }, (_, i) => (

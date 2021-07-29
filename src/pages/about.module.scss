@@ -70,7 +70,11 @@
 }
 
 .campus-button {
-  display: grid;
-  position: relative;
-  padding-bottom: 30px; 
+  display: flexbox;
+  flex-direction: row;
+  position: absolute;
+  // float: right;
+  // margin-bottom: 30px;
+  // margin-right: 20px;
+  // margin-left: 60%;
 }
