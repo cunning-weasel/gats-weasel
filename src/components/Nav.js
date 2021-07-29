@@ -37,7 +37,7 @@ const Nav = () => {
 
   return (
     <div className={`${color} `}>
-      <nav className="navbar navbar-expand-lg">
+      <nav className="navbar justify-content-center navbar-expand-lg">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
             <StaticImage
