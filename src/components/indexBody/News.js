@@ -37,7 +37,7 @@ const News = () => {
             data.allGhostPost.edges.map(({ node }) => {
               return (
                 <div className="col-12 col-lg-4">
-                  <Link to="/news">
+                  <Link className="text-decoration-none" to="/news">
                     <div className={hover}>
                       <Card key={node.id} style={{ width: "18rem" }}>
                         <Card.Img variant="top" src={node.feature_image} />
