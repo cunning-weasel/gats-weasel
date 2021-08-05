@@ -143,7 +143,6 @@ const AboutPage = () => {
           Hash, hash... hey You, yes You check out our Digital Campus.
          </Link>
          </div>
-         
          </div>
        
       </Layout>
