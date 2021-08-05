@@ -24,7 +24,7 @@ function Contact() {
                 className="mb-3"
                 controlId="exampleForm.ControlInput1"
               >
-                <Form.Label>Your name </Form.Label>
+                <Form.Label>Name </Form.Label>
                 <Form.Control type="name" placeholder="name" />
               </Form.Group>
             </div>
@@ -33,7 +33,7 @@ function Contact() {
                 className="mb-3"
                 controlId="exampleForm.ControlInput1"
               >
-                <Form.Label>Your Tel/number</Form.Label>
+                <Form.Label>Number</Form.Label>
                 <Form.Control type="tel/number" placeholder="number" />
               </Form.Group>
             </div>
@@ -42,7 +42,7 @@ function Contact() {
                 className="mb-3"
                 controlId="exampleForm.ControlInput1"
               >
-                <Form.Label>Your Email address</Form.Label>
+                <Form.Label>Email</Form.Label>
                 <Form.Control type="email" placeholder="name@example.com" />
               </Form.Group>
             </div>
@@ -56,6 +56,7 @@ function Contact() {
               </Form.Group>
             </div>
           </div>
+          <div className="btn btn-danger">Send</div>
         </div>
       </Form>
     </Layout>
